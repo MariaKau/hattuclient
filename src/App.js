@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import './App.css';
 
 import Home from './components/Home';
+import Board from './components/bingo/Board';
 
 // Navigation and router
 
@@ -14,6 +15,7 @@ class App extends Component {
         <Navigation></Navigation>
             <Switch>
               <Route exact path="/home" render={() => (<Home />)}></Route>
+              <Route exact path="/bingo" render={() => (<Board />)}></Route>
             </Switch>
       </Router>
     );
