@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './navigation/Navigation';
 import './App.css';
-import SideNav, { Toggle, Nav, NavItem, NavText } from '@trendmicro/react-sidenav';
-
+import Container from 'react-bootstrap/Container'
 import Home from './components/Home';
 
 
@@ -12,7 +11,7 @@ import Home from './components/Home';
 class App extends Component {
   render() {
     return (
-      <container>
+      <Container>
         <Router>
           <Navigation></Navigation>
             <Switch>
@@ -24,7 +23,7 @@ class App extends Component {
           
         </Router>
 
-      </container>
+      </Container>
       // <Router>
       //   <Navigation></Navigation>
       //       <Switch>
