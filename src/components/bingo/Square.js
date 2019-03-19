@@ -2,8 +2,8 @@ import React from 'react';
 
 class Square extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       white: true
@@ -19,8 +19,8 @@ class Square extends React.Component {
 
     return (
       <button className={btn_class} id="square" onClick={this.changeColor.bind(this)}>
-        Lorem Ipsum
-         </button>
+        {this.props.message}
+      </button>
     )
   }
 }
