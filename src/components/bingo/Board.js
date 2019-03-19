@@ -6,7 +6,6 @@ class Board extends React.Component {
 
   constructor() {
     super()
-
     this.state = {
       messages: []
     }

@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './navigation/Navigation';
 import './App.css';
-
+import Container from 'react-bootstrap/Container'
 import Home from './components/Home';
+import Generator from './components/generator/GeneratorMain';
 import Board from './components/bingo/Board';
 
 
@@ -12,19 +13,16 @@ import Board from './components/bingo/Board';
 class App extends Component {
   render() {
     return (
+      <Container>
         <Router>
           <Navigation></Navigation>
             <Switch>
               <Route exact path="/home" render={() => (<Home />)}></Route>
-              <Route exact path="/bingo" render={() => (<Board />)}></Route>
-            </Switch>    
+              <Route path="/generaattori" render={() => (<Generator />)}></Route>
+              <Route path="/bingo" render={() => (<Board />)}></Route>
+            </Switch>
         </Router>
-      // <Router>
-      //   <Navigation></Navigation>
-      //       <Switch>
-      //         <Route exact path="/" render={() => (<Home />)}></Route>
-      //       </Switch>
-      // </Router>
+      </Container>
     );
   }
 }
