@@ -1,5 +1,10 @@
 .sidenav {
-    background-color: #F49E09;
-    color: black;
+    background-color: rgba(244, 158, 9, 0.900);
+    
 }
+ 
+.navitem {
+    padding-bottom: 8%;
+}
+
 

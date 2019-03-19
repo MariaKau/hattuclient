@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+//import { Navbar, Nav } from 'react-bootstrap';
 import SideNav, { Toggle, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -10,13 +10,14 @@ import home from './Homeicon.png';
 import quote from './Commenticon.png';
 import rocket from './Rocketicon.png';
 
-
+//https://github.com/trendmicro-frontend/react-sidenav
 export default class Navigation extends Component {
   render() {
     return (
       <div>
+        
         <Route render={({ location, history }) => (
-          <React.Fragment>
+          <React.Fragment style={{ fontSize: '1.5em', color: '#474647' }}>
             <SideNav className="sidenav"
               onSelect={(selected) => {
                 const to = '/' + selected;
@@ -25,43 +26,42 @@ export default class Navigation extends Component {
                 }
               }}
             >
-              <SideNav.Toggle />
-              <SideNav.Nav defaultSelected="home">
-                <NavItem eventKey="home">
+              <SideNav.Toggle style={{ color: '#474647' }}/>
+              <SideNav.Nav defaultSelected="home" >
+                <NavItem eventKey="home" className="navitem">
                 <NavIcon>
-                    <img src={home} height="60%" width="50%"></img>
+                    <img src={home} height="60%" width="50%" alt="Kotisivu"></img>
                   </NavIcon>
-                  <NavText>
+                  <NavText style={{ fontSize: '1.5em', color: '#474647' }}>
                     Kotisivu
                         </NavText>
                 </NavItem>
-                <NavItem eventKey="bingo">
+                <NavItem eventKey="bingo" className="navitem">
                   <NavIcon>
-                    <img src={bingo} height="60%" width="50%"></img>
+                    <img src={bingo} height="60%" width="50%" alt="Bingo"></img>
                   </NavIcon>
-                  <NavText>
+                  <NavText style={{ fontSize: '1.5em', color: '#474647' }}>
                     Bingo
                         </NavText>
                 </NavItem>
-                <NavItem eventKey="generaattori">
+                <NavItem eventKey="generaattori" className="navitem">
                 <NavIcon>
-                    <img src={quote} height="60%" width="50%"></img>
+                    <img src={quote} height="60%" width="50%" alt="Voimasana"></img>
                   </NavIcon>
-                  <NavText>
+                  <NavText style={{ fontSize: '1.5em', color: '#474647' }}>
                     Generaattori
                         </NavText>
                 </NavItem>
-                <NavItem eventKey="game">
+                <NavItem eventKey="game" className="navitem">
                 <NavIcon>
-                    <img src={rocket} height="60%" width="50%"></img>
+                    <img src={rocket} height="60%" width="50%" alt="Invaders"></img>
                   </NavIcon>
-                  <NavText>
+                  <NavText style={{ fontSize: '1.5em', color: '#474647' }}>
                     Invaders
                         </NavText>
                 </NavItem>
               </SideNav.Nav>
             </SideNav>
-
           </React.Fragment>
         )}
         />
