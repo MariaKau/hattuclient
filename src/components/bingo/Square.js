@@ -19,7 +19,7 @@ class Square extends React.Component {
 
     return (
       <button className={btn_class} id="square" onClick={this.changeColor.bind(this)}>
-        {this.props.message}
+        {this.props.quote}
       </button>
     )
   }
