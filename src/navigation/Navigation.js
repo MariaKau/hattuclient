@@ -17,7 +17,7 @@ export default class Navigation extends Component {
       <div>
         
         <Route render={({ location, history }) => (
-          <React.Fragment style={{ fontSize: '1.5em', color: '#474647' }}>
+          <div style={{ fontSize: '1.5em', color: '#474647' }}>
             <SideNav className="sidenav"
               onSelect={(selected) => {
                 const to = '/' + selected;
@@ -62,9 +62,11 @@ export default class Navigation extends Component {
                 </NavItem>
               </SideNav.Nav>
             </SideNav>
-          </React.Fragment>
+          </div>
+          
         )}
         />
+
         {/* <Navbar>
           <Nav>
             <Nav.Link eventKey={1} href="/">Etusivu</Nav.Link>
@@ -73,6 +75,7 @@ export default class Navigation extends Component {
             <Nav.Link eventKey={4} href="/generaattori">Generaattori</Nav.Link>
           </Nav>
         </Navbar> */}
+        
       </div>
     )
   }
