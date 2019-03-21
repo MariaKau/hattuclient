@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './GeneratorMain.css';
+import Container from 'react-bootstrap/Container'
 
 
 class Generator extends Component {
@@ -38,7 +39,7 @@ class Generator extends Component {
             <p key={i}>{powerQuote.sentence}</p>
         );
         return (
-
+           
             <div className="content">
                 <h1 className="title">Voimalausegeneraattori</h1>
                 <hr className="dash"></hr>
@@ -54,9 +55,13 @@ class Generator extends Component {
                         Kiroilu
                         </button> 
                     </div>
+                    <Container>
                     <div className="quote">
                         <p className="quote_text">{getSentence}</p>
                     </div>
+                    <div class="circular1"></div>
+                    <div class="circular2"></div>
+                    </Container>
                 </div>
             </div>
 
