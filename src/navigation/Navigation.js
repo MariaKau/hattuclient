@@ -14,7 +14,7 @@ import rocket from './Rocketicon.png';
 export default class Navigation extends Component {
   render() {
     return (
-      <div>
+      <div id="navbar">
         
         <Route render={({ location, history }) => (
           <React.Fragment style={{ fontSize: '1.5em', color: '#474647' }}>
