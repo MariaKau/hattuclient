@@ -18,7 +18,7 @@ export default class Navigation extends Component {
         
         <Route render={({ location, history }) => (
           <div style={{ fontSize: '1.5em', color: '#474647' }}>
-            <SideNav className="sidenav"
+            <SideNav className="sidenav" 
               onSelect={(selected) => {
                 const to = '/' + selected;
                 if (location.pathname !== to) {

@@ -11,6 +11,7 @@ export default class Home extends Component {
           <Col>
             <div>
               <h1>Tervetuloa</h1>
+              <hr className="dash"></hr>
             </div>
           </Col>
         </Row>
