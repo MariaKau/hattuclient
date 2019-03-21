@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 //import { Navbar, Nav } from 'react-bootstrap';
-import SideNav, { Toggle, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import './navigation.css';
 import bingo from './Bingoicon.png';
@@ -67,15 +67,6 @@ export default class Navigation extends Component {
         )}
         />
 
-        {/* <Navbar>
-          <Nav>
-            <Nav.Link eventKey={1} href="/">Etusivu</Nav.Link>
-            <Nav.Link eventKey={2} href="/bingo">Bingo</Nav.Link>
-            <Nav.Link eventKey={3} href="/invaders">Invaders</Nav.Link>
-            <Nav.Link eventKey={4} href="/generaattori">Generaattori</Nav.Link>
-          </Nav>
-        </Navbar> */}
-        
       </div>
     )
   }
