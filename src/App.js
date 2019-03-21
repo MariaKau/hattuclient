@@ -8,21 +8,22 @@ import Generator from './components/generator/GeneratorMain';
 import Board from './components/bingo/Board';
 
 
+
 // Navigation and router
 
 class App extends Component {
   render() {
     return (
-      <Container>
+      <Container className="container">
         <Router>
-          <Navigation></Navigation>
+          <Navigation className="navi"></Navigation>
             <Switch>
               <Route exact path="/home" render={() => (<Home />)}></Route>
               <Route path="/generaattori" render={() => (<Generator />)}></Route>
               <Route path="/bingo" render={() => (<Board />)}></Route>
             </Switch>
         </Router>
-      </Container>
+        </Container>
     );
   }
 }
