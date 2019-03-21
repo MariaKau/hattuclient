@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './GeneratorMain.css';
 import Container from 'react-bootstrap/Container'
+import image from '../generator/women.jpg';
 
 
 class Generator extends Component {
@@ -55,13 +56,13 @@ class Generator extends Component {
                         Kiroilu
                         </button> 
                     </div>
-                    <Container>
+                    <Container className="puhekupla">
+                    <img src={image} alt="women" width="550"/>
                     <div className="quote">
                         <p className="quote_text">{getSentence}</p>
-                    </div>
-                    <div class="circular1"></div>
-                    <div class="circular2"></div>
+                    </div><br></br>
                     </Container>
+                    <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
                 </div>
             </div>
 
