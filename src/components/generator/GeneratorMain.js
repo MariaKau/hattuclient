@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './GeneratorMain.css';
 import Container from 'react-bootstrap/Container'
 import image from '../generator/women.jpg';
+import Button from 'react-bootstrap/Button'
 
 
 class Generator extends Component {
@@ -51,19 +52,19 @@ class Generator extends Component {
                         itsellesi tilanteeseen sopiva feministinen lause tai päästele ärräpäitä generaattorin
                 avustuksella.</p>
                     <div className="app">
-                        <div className="btn-floating">
-                            <button className="btn-quote-ajatus" onClick={this.getQuotes1}>
-                                Ajatus
-                        </button>
-                            <button className="btn-quote-tsemppi" onClick={this.getQuotes2}>
-                                Tsemppi
-                        </button>
-                            <button className="btn-quote-kiroilu" onClick={this.getQuotes3}>
-                                Kiroilu
-                        </button>
+                        <div className="btn">
+                            <Button className="btn-quote-ajatus" onClick={this.getQuotes1}>
+                                AJATUS
+                        </Button>
+                            <Button className="btn-quote-tsemppi" onClick={this.getQuotes2}>
+                                TSEMPPI
+                        </Button>
+                            <Button className="btn-quote-kiroilu" onClick={this.getQuotes3}>
+                                KIROILU!
+                        </Button>
                         </div>
                         <Container className="puhekupla">
-                            <img src={image} alt="women" height="650" />
+                        <img src={image} alt="women" height="650" />
                             <div className="quote">
                                 <p className="quote_text">{getSentence}</p>
                             </div><br></br>
