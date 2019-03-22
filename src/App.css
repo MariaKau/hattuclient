@@ -1,11 +1,12 @@
-/* html, body {
-  margin-top: 1.5%;
-} */
+html {
+  font-family: 'Lato', sans-serif;
+}
 
 
 .App {
   text-align: center;
   height: 100vh;
+  
 }
 
 .container {
@@ -62,6 +63,12 @@
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
+
+/* @media only screen and (max-width: 1000px) {
+  .sidemenu {
+    display: none;
+  }
+} */
 
 /* .bm-morph-shape {
   fill: #373a47;
