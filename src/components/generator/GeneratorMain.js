@@ -68,6 +68,7 @@ class Generator extends Component {
                     </Container>
                     <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
                 </div>
+
             </div>
 
         );
