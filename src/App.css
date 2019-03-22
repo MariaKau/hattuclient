@@ -1,6 +1,6 @@
-html, body {
+/* html, body {
   margin-top: 1.5%;
-}
+} */
 
 
 .App {
@@ -44,7 +44,7 @@ html, body {
 }
 
 .bm-burger-bars {
-  background-color: rgba(31, 181, 144);
+  background-color: rgba(244, 158, 9);
 }
 
 .bm-cross-button {

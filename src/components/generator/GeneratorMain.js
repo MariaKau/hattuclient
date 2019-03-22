@@ -17,19 +17,19 @@ class Generator extends Component {
     }
 
     getQuotes1() {
-        fetch('https://hattu-server.herokuapp.com/api/generaattori/:ajatus', { mode: 'cors' })
+        fetch('https://hattu-server.herokuapp.com/api/ajatus/:ajatus', { mode: 'cors' })
             .then(res => res.json())
             .then(data => this.setState({ quotes: data }))
             .catch((err) => { throw err })
     }
     getQuotes2() {
-        fetch('https://hattu-server.herokuapp.com/api/generaattori/:tsemppi', { mode: 'cors' })
+        fetch('https://hattu-server.herokuapp.com/api/tsemppi/:tsemppi', { mode: 'cors' })
             .then(res => res.json())
             .then(data => this.setState({ quotes: data }))
             .catch((err) => { throw err })
     }
     getQuotes3() {
-        fetch('https://hattu-server.herokuapp.com/api/generaattori/:kiroilu', { mode: 'cors' })
+        fetch('https://hattu-server.herokuapp.com/api/kiroilu/:kiroilu', { mode: 'cors' })
             .then(res => res.json())
             .then(data => this.setState({ quotes: data }))
             .catch((err) => { throw err })
@@ -43,13 +43,15 @@ class Generator extends Component {
             <Container fluid="true">
                 <div className="content">
                     <h1 className="title">Feministinen generaattori</h1>
+                    
                     <hr className="dash"></hr>
+                    </div>
                     <p className="kuvailu">
                         Iskikö huijarisyndrooma? Kiroiluttaako, mutta et pääse alkuun? Generoi alta
                         itsellesi tilanteeseen sopiva feministinen lause tai päästele ärräpäitä generaattorin
                 avustuksella.</p>
                     <div className="app">
-                        <div className="btn">
+                        <div className="btn-floating">
                             <button className="btn-quote-ajatus" onClick={this.getQuotes1}>
                                 Ajatus
                         </button>
@@ -68,8 +70,6 @@ class Generator extends Component {
                         </Container>
                         <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
                     </div>
-
-                </div>
             </Container>
         );
     }
