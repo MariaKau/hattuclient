@@ -39,26 +39,26 @@ class Generator extends Component {
             <p key={i}>{powerQuote.sentence}</p>
         );
         return (
-
-            <div className="content">
-                <h1 className="title">Feministinen generaattori</h1>
-                <hr className="dash"></hr>
-                <p className = "kuvailu">
-                Iskikö huijarisyndrooma? Kiroiluttaako, mutta et pääse alkuun? Generoi alta
-                itsellesi tilanteeseen sopiva feministinen lause tai päästele ärräpäitä generaattorin
+            <Container fluid="true">
+                <div className="content">
+                    <h1 className="title">Feministinen generaattori</h1>
+                    <hr className="dash"></hr>
+                    <p className="kuvailu">
+                        Iskikö huijarisyndrooma? Kiroiluttaako, mutta et pääse alkuun? Generoi alta
+                        itsellesi tilanteeseen sopiva feministinen lause tai päästele ärräpäitä generaattorin
                 avustuksella.</p>
-                <div className="app">
-                    <div className="btn">
-                        <button className="btn-quote-ajatus" onClick={this.getQuotes1}>
-                            Ajatus
+                    <div className="app">
+                        <div className="btn">
+                            <button className="btn-quote-ajatus" onClick={this.getQuotes1}>
+                                Ajatus
                         </button>
-                        <button className="btn-quote-tsemppi" onClick={this.getQuotes2}>
-                            Tsemppi
+                            <button className="btn-quote-tsemppi" onClick={this.getQuotes2}>
+                                Tsemppi
                         </button>
-                        <button className="btn-quote-kiroilu" onClick={this.getQuotes3}>
-                            Kiroilu
+                            <button className="btn-quote-kiroilu" onClick={this.getQuotes3}>
+                                Kiroilu
                         </button>
-                    </div>
+    
                     <Container className="puhekupla">
                         <img className="kuva" src={image} alt="women" height="650" />
                         <div className="quote">
@@ -70,6 +70,8 @@ class Generator extends Component {
 
             </div>
 
+                </div>
+            </Container>
         );
     }
 }

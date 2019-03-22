@@ -14,6 +14,7 @@ import SideBar from './navigation/Sidemenu';
 class App extends Component {
   render() {
     return (
+      
       <div id="App">
         <Router>
           <SideBar></SideBar>

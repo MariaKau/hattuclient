@@ -74,7 +74,9 @@ p.quote_text {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 40px;
 	color: #F24C4E;
+	
 }
+
 .kuvailu {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 20px;
@@ -82,7 +84,41 @@ p.quote_text {
 }
 
 .dash {
-	border-top: 2px solid black;
+	border-top: 1px dashed #595859;
+  
+  }
+
+.btn {
+	width: 50%;
+	
+}
+
+.btn-quote-ajatus {
+	margin-right: 10%;
+	border-radius: 45px;
+	height: 90px;
+	width: 90px;
+	background-color: rgba(31, 181, 144, 0.801);
+	border: solid 3px #595859;
+}
+
+.btn-quote-tsemppi {
+	margin-right: 10%;
+	border-radius: 45px;
+	height: 90px;
+	width: 90px;
+	background-color: rgba(244, 158, 9, 0.801);
+	border: solid 3px #595859;
+	
+}
+
+.btn-quote-kiroilu {
+	margin-right: 10%;
+	border-radius: 45px;
+	height: 90px;
+	width: 90px;
+	background-color: rgba(242, 76, 79, 0.801);
+	border: solid 3px #595859;
 }
 p.quote_text {
 	position: relative;
