@@ -9,7 +9,6 @@ class Generator extends Component {
         super()
         this.state = {
             quotes: [],
-            isChecked: true,
         }
         this.getQuotes1 = this.getQuotes1.bind(this);
         this.getQuotes2 = this.getQuotes2.bind(this);
@@ -61,7 +60,7 @@ class Generator extends Component {
                         </button>
                     </div>
                     <Container className="puhekupla">
-                        <img src={image} alt="women" height="650" />
+                        <img className="kuva" src={image} alt="women" height="650" />
                         <div className="quote">
                             <p className="quote_text">{getSentence}</p>
                         </div><br></br>
