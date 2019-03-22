@@ -1,11 +1,14 @@
 .sidenav {
     background-color: rgba(244, 158, 9, 0.900);
-    height: 100% !important;
 }
  
 .navitem {
     padding-bottom: 8%;
-    height: 100% !important;
+    
+}
+
+#navbar {
+    height: 100%;
 }
 
 
