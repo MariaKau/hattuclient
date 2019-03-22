@@ -16,7 +16,12 @@ class Board extends React.Component {
   }
 
   getData = () => {
-    fetch('https://hattu-server.herokuapp.com/api/bingo', { mode: 'cors' })
+    fetch('https://hattu-server.herokuapp.com/api/bingo', { 
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json; charset=LATIN6'
+      }
+     })
       .then(res => res.json())
       .then(data => this.setState({ quotes: data }))
       .catch((err) => { throw err })
@@ -34,11 +39,7 @@ class Board extends React.Component {
   render() {
 
     return (
-      <div>
-        <div>
-          <h1>Setämiesbingo</h1>
-          <br/>
-        </div>
+      <div id="bingo">
         <div id="board-row-1" className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
