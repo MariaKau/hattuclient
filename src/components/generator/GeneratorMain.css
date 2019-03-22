@@ -1,4 +1,4 @@
-@media screen and (max-width: 420px) {
+@media only screen and (max-width: 420px) {
 .p {
 	font-weight: 250px;
 }
@@ -166,7 +166,7 @@ p.quote_text {
   }
   .quote {
 	display: inline-block;
-  }
+  } 
   .copy {
 	font-size: 12px;
   }
