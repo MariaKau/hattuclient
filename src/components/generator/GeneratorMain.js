@@ -3,6 +3,7 @@ import './GeneratorMain.css';
 import Container from 'react-bootstrap/Container'
 import image from '../generator/women.jpg';
 import Button from 'react-bootstrap/Button'
+import { Animated } from 'react-animated-css';
 
 
 class Generator extends Component {
@@ -66,7 +67,7 @@ class Generator extends Component {
                         <Container className="puhekupla">
                         <img src={image} alt="women" height="650" />
                             <div className="quote">
-                                <p className="quote_text">{getSentence}</p>
+                            <p className="quote_text">{getSentence}</p>
                             </div><br></br>
                         </Container>
                         <p className="copy">Image created by rawpixel.com - www.freepik.com</p>

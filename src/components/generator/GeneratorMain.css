@@ -53,8 +53,8 @@
 }
 
 #ajatusbtn {
-	background-color: rgb(244, 158, 9);
-	background-image: linear-gradient(to bottom, rgb(244, 158, 9) 0%, rgb(245, 187, 129) 100%);
+	background-color: rgba(244, 158, 9, 0.685);
+	background-image: linear-gradient(to bottom, rgb(244, 158, 6) 0%, rgb(247, 199, 151) 100%);
 }
 #ajatusbtn:hover {
 	box-shadow: 0px 15px 25px -5px rgba(darken(rgb(70, 85, 105), 40%));
@@ -81,18 +81,19 @@
 }
 
 #kiroilubtn {
-	background-color: rgb(31, 181, 144);
-	background-image: linear-gradient(to bottom, rgb(31, 181, 144) 0%, rgb(112, 185, 167) 100%);
+	background-color: rgba(31, 181, 161, 0.678);
+	background-image: linear-gradient(to bottom, rgb(31, 181, 181) 0%, rgb(112, 185, 181) 100%);
 }
 #kiroilubtn:hover {
 	box-shadow: 0px 15px 25px -5px rgba(darken(rgb(30, 60, 99), 40%));
 	transform: scale(1.05)
 }
 #kiroilubtn:active {
-	background-image: linear-gradient(to bottom, rgb(31, 177, 140) 0%, rgb(62, 173, 146) 100%);
+	background-image: linear-gradient(to bottom, rgb(31, 177, 160) 0%, rgb(62, 173, 166) 100%);
 	box-shadow: 0px 5px #2b638f, 0px 1px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 	transform: translate(0, 4px);
 }
+
 
 	
 p.quote_text {
@@ -142,6 +143,7 @@ p.quote_text {
   }
   .quote {
 	display: inline-block;
+	
   }
   .copy {
 	font-size: 12px;
