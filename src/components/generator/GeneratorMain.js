@@ -52,15 +52,15 @@ class Generator extends Component {
                         itsellesi tilanteeseen sopiva feministinen lause tai päästele ärräpäitä generaattorin
                 avustuksella.</p>
                     <div className="app">
-                        <div className="btn">
-                            <Button className="btn-quote-ajatus" onClick={this.getQuotes1}>
+                        <div className="btngroup">
+                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes1}>
                                 AJATUS
                         </Button>
-                            <Button className="btn-quote-tsemppi" onClick={this.getQuotes2}>
+                            <Button className="btn" id="tsemppibtn" onClick={this.getQuotes2}>
                                 TSEMPPI
                         </Button>
-                            <Button className="btn-quote-kiroilu" onClick={this.getQuotes3}>
-                                KIROILU!
+                            <Button className="btn" id="kiroilubtn" onClick={this.getQuotes3}>
+                                K*ROILU!
                         </Button>
                         </div>
                         <Container className="puhekupla">
