@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import image from '../generator/women.jpg';
 import Button from 'react-bootstrap/Button';
-//import { Animated } from 'react-animated-css';
+import { Animated } from 'react-animated-css';
 
 
 class Generator extends Component {
@@ -37,61 +37,50 @@ class Generator extends Component {
             .then(data => this.setState({ quotes: data }))
             .catch((err) => { throw err })
     }
+
+    handleStateChange() {
+
+
+    }
+
     render() {
         console.log(this.state.quotes)
         const getSentence = this.state.quotes.map((powerQuote, i) =>
-            <p key={i}>{powerQuote.sentence}</p>
+        <Animated animationIn="tada"><p key={i}>{powerQuote.sentence}</p></Animated>
         );
         return (
             <Container className="whole" fluid="true">
                 <Row>
                     <Col><h1 className="title">Feministinen generaattori</h1>
-                        <hr className="dash"></hr>
                     </Col>
                 </Row>
                 <Row className="kuvailucontainer">
-                    <Col xs={1}></Col>
-                    {/* <Col xs={6} >
-                        <div>
-                            <p className="kuvailu">
-                                Iskikö huijarisyndrooma?<br></br>
-                                Kiroiluttaako, mutta et pääse alkuun?<br></br>
-                                Kaipaatko sanallista rohkaisua?<br></br></p>
-                            <p className="kysely">Valitse napeista itsellesi tilanteeseen sopiva feministinen voimalause tai rohkaisu.<br></br>
-                                Tai päästele ärräpäitä generaattorin avustuksella.</p>
-                        </div>
-                    </Col> */}
 
-
-                    <Col xs={4} className="btngroup">
-
+                    <Col md={{ span: 3, offset: 3 }} className="btngroup">
                         <Button className="btn" id="ajatusbtn" onClick={this.getQuotes1}>
-                            Ajatus
+                            Päivän ajatus
                         </Button>
                         <br />
                         <Button className="btn" id="ajatusbtn" onClick={this.getQuotes2}>
-                            TSEMPPI
+                            Tsemppi
                         </Button>
                         <br />
                         <Button className="btn" id="ajatusbtn" onClick={this.getQuotes3}>
                             K*ROILU!
                         </Button>
-
                     </Col>
-
-                    <Col xs={1}></Col>
+                    <Col md={4} className="bubble">
+                    <hgroup className="speechbubble">
+                        <h4 className="bubblequote">{getSentence}</h4>
+                    </hgroup>
+                    </Col>
                 </Row>
-
-                <Container className="puhekupla">
-                    <div className="imgcontainer">
-                        <img className="kuva" src={image} alt="women" height="400" />
-                    </div>
-                    <div className="quote">
-                        <p className="quote_text">{getSentence}</p>
-                    </div><br></br>
-
-                    <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
-                </Container>
+                <Row>
+                    <Col md={{ span: 6, offset: 3 }}>
+                            <img className="kuva" src={image} alt="women" style={{width: "100%", height: "auto"}}  />
+                        <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
+                    </Col>
+                </Row>
             </Container >
         );
     }

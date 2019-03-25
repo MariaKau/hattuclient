@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './navigation.css';
 import Generator from '../components/generator/GeneratorMain';
 import Board from '../components/bingo/Board';
 
