@@ -6,26 +6,32 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 
 export default class Tabmenu extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
         this.state = {
-          key: 'home',
+          // key: 'bingo',
+          activeTab: props.activeTab || 1
         };
+        this.handleSelect = this.handleSelect.bind(this);
       }
   render() {
     return (
-        <Tabs
-        id="controlled-tab-example"
-        activeKey={this.state.key}
-        onSelect={key => this.setState({ key })}
-      >
-        <Tab eventKey="bingo" title="Bingo">
+        <Tabs className="myMenu" activeKey={this.state.activeTab}
+        onSelect={this.handleSelect}>
+        <Tab eventKey={1} title="Bingo">
           <Board />
         </Tab>
-        <Tab eventKey="generaattori" title="Generaattori">
+        <Tab eventKey={2} title="Generaattori">
           <Generator />
         </Tab>
       </Tabs>
-    )
+    );
+  }
+  handleSelect(selectedTab) {
+    this.setState({
+      activeTab: selectedTab
+    });
   }
 }
+
+  

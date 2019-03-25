@@ -18,7 +18,7 @@ class App extends Component {
       <Animated animationIn="fadeIn" className="animated">
       <div id="App">
         
-          <Tabmenu></Tabmenu>
+      <Tabmenu activeTab={2} />
           
           <div id="page-wrap">
           {/* <Navigation className="navi"></Navigation> */}
