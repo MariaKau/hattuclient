@@ -1,48 +1,50 @@
 .title {
 	font-size: 40px;
-	color: #F24C4E;
+	color: rgb(31, 181, 161);
 	padding-top: 1.5%;
 	padding-bottom: 1%;
 }
 
-.kuvailu {
-	font-size: 20px;
-	color: #898989;
-}
 
 .dash {
 	border-top: 1px dashed #595859;
 	width: 80%;
-  }
+	padding-bottom: 2%;
+}
+
+.kuvailucontainer {
+
+}
 
 .btngroup {
-	width: 50%;
-	display: inline-block;
+	display: block;
+	
 }
 
 /* https://designmodo.com/3d-css3-button/ */
 .btn {
-  width: 170px;
-  height: 80px;
-  margin-right: 4%;
-  margin-bottom: 3%;
-  font-size: 1.4em;
-  letter-spacing: 0.3em;
+  width: 150px;
+  height: 60px;
+  /* margin-right: 4%;*/
+  margin-bottom: 6%; 
+  font-size: 1.2em;
+  color: #595859;
+  letter-spacing: 0.1em;
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: 10px;
   transition: all .3s;
   border-bottom: 1px solid rgb(95, 62, 4);
   text-shadow: 0px -1px 0px rgba(0,0,0,.5);
-  box-shadow: 1px 3px 0px 0px #839fb4, 1px 3px 15px 0px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  box-shadow: 2px 4px 0px 0px #8f8e8da2, 2px 4px 10px 0px rgba(41, 41, 41, 0.63), inset 0px 1px 0px rgba(128, 121, 115, 0.473), inset 0px 0px 3px rgba(194, 193, 192, 0.5);
   transition: all .4s ease-in-out;
 }
 
 #ajatusbtn {
-	background-color: rgba(244, 158, 9, 0.685);
-	background-image: linear-gradient(to bottom, rgb(184, 119, 8) 0%, rgba(244, 158, 9) 100%);
+	background-color: rgba(244, 158, 9, 0.900);
+	background-image: linear-gradient(to bottom, rgba(244, 158, 9, 0.900) 0%, rgba(241, 176, 64, 0.9) 100%);
 }
 #ajatusbtn:hover {
-	box-shadow: 0px 15px 25px -5px rgba(darken(rgb(70, 85, 105), 40%));
+	box-shadow: 0px 15px 25px -5px rgba(darken(rgb(105, 94, 70), 40%));
 	transform: scale(1.05)
 }
 #ajatusbtn:active {
@@ -78,7 +80,6 @@
 	box-shadow: 0px 5px #2b638f, 0px 1px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 	transform: translate(0, 4px);
 }
-
 
 	
 p.quote_text {
@@ -132,19 +133,21 @@ p.quote_text:before {
 	font-size: 12px;
 }
 
+
+
 @media only screen and (max-width: 420px) {
 .kuvailu {
 	font-size: 13px;
 }
 /* image not visible in mobile */
 .kuva {
-	display: none;
+	display: none !important;
 }
 /*buttons smaller in mobile */
 .btn {
 	height: 30px;
-	width: 50px;
-	font-size: 8px;
+	width: 60px;
+	font-size: 0.4em;
 }
 
 /* title smaller in mobile */
