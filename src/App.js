@@ -5,10 +5,11 @@ import './App.css';
 // import Container from 'react-bootstrap/Container'
 import Home from './components/Home';
 import Generator from './components/generator/GeneratorMain';
-import Board from './components/bingo/Board';
+// import Board from './components/bingo/Board';
 
 import SideBar from './navigation/Sidemenu';
 import {Animated} from "react-animated-css";
+import BingoGame from './components/bingo/BingoGame';
 
 // Navigation and router
 
@@ -22,9 +23,9 @@ class App extends Component {
           <div id="page-wrap">
           {/* <Navigation className="navi"></Navigation> */}
             <Switch>
-              <Route exact path="/home" render={() => (<Home />)}></Route>
+              <Route exact path="/" render={() => (<Home />)}></Route>
               <Route path="/generaattori" render={() => (<Generator />)}></Route>
-              <Route path="/bingo" render={() => (<Board />)}></Route>
+              <Route path="/bingo" render={() => (<BingoGame />)}></Route>
             </Switch>
             </div>
         </Router>

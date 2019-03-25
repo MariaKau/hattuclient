@@ -7,6 +7,12 @@ class Board extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      history: [
+        {
+          squares: Array(16).fill(null)
+        }
+      ],
+      stepNumber: 0,
       quotes: []
     }
   }
@@ -16,7 +22,12 @@ class Board extends React.Component {
   }
 
   getData = () => {
-    fetch('https://hattu-server.herokuapp.com/api/bingo', { mode: 'cors' })
+    fetch('https://hattu-server.herokuapp.com/api/bingo', {
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json; charset=LATIN6'
+      }
+    })
       .then(res => res.json())
       .then(data => this.setState({ quotes: data }))
       .catch((err) => { throw err })
@@ -26,19 +37,31 @@ class Board extends React.Component {
     if (number >= this.state.quotes.length)
       return <Square quote="Bingo latautuu..."></Square>
     return (
-      <Square quote={this.state.quotes[number].quote} />
+      <Square quote={this.state.quotes[number].quote} onClick={() => this.props.onClick(number)}/>
     );
   }
-  
+
+  // getBingo = (squares) => {
+  //   const lines = [
+  //     [0, 1, 2, 3],
+  //     [4, 5, 6, 7],
+  //     [8, 9, 10, 11],
+  //     [12, 13, 14, 15]
+  //   ];
+  //   for (let i=0; i < lines.length; i++) {
+  //     const [a, b, c, d] = lines[i];
+  //     if (squares[a] === squares[b] === squares[c] === squares[d]) {
+  //       return squares[a];
+  //     }
+  //   }
+  //   alert("BINGO!");
+  //   return null;
+  // }
 
   render() {
 
     return (
-      <div>
-        <div>
-          <h1>Setämiesbingo</h1>
-          <br/>
-        </div>
+      <div id="bingo">
         <div id="board-row-1" className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}

@@ -3,9 +3,8 @@ h1 {
 }
 
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    
-    align-items: center;
+    font-family: 'Lato', sans-serif;
+    align-items: flex-end;
   }
 
   ol, ul {
@@ -18,18 +17,28 @@ body {
     display: table;
   }
 
+  .board-row {
+    display: flex;
+    flex-direction: column;
+  }
+
   .status {
     margin-bottom: 10px;
   }
 
+  #bingo {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #999;
+    padding: 40px;
+  }
+
   #square {
     background: #fff;
-    border-radius: 80px;
     border: 1px solid #999;
     float: left;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
-    /* line-height: 200px; */
     height: 200px;
     margin-right: -1px;
     margin-top: -1px;
@@ -50,10 +59,8 @@ body {
 
   @media only screen and (max-width: 1024px) {
     #square {
-      border-radius: 25px;
       font-size: 14px;
       font-weight: bold;
-      /* line-height: 200px; */
       height: 150px;
       margin-right: -1px;
       margin-top: -1px;
@@ -61,18 +68,12 @@ body {
       text-align: center;
       width: 150px;
     }
-
-    body {
-      margin: 70px;
-    }
   }
 
   @media only screen and (max-width: 414px) {
     #square {
-      border-radius: 5px;
       font-size: 6px;
       font-weight: bold;
-      /* line-height: 200px; */
       height: 60px;
       margin-right: -1px;
       margin-top: -1px;
@@ -84,10 +85,8 @@ body {
 
   @media only screen and (max-width: 375px) {
     #square {
-      border-radius: 5px;
       font-size: 6px;
       font-weight: bold;
-      /* line-height: 200px; */
       height: 55px;
       margin-right: -1px;
       margin-top: -1px;
@@ -95,27 +94,17 @@ body {
       text-align: center;
       width: 55px;
     }
-
-    body {
-      margin: 50px;
-    }
   }
 
   @media only screen and (max-width: 320px) {
     #square {
-      border-radius: 5px;
       font-size: 6px;
       font-weight: bold;
-      /* line-height: 200px; */
       height: 48px;
       margin-right: -1px;
       margin-top: -1px;
       padding: 0;
       text-align: center;
       width: 48px;
-    }
-
-    body {
-      margin: 50px;
     }
   }
