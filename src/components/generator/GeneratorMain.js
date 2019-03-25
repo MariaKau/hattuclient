@@ -3,6 +3,7 @@ import './GeneratorMain.css';
 import Container from 'react-bootstrap/Container'
 import image from '../generator/women.jpg';
 import Button from 'react-bootstrap/Button'
+import { Animated } from 'react-animated-css';
 
 
 class Generator extends Component {
@@ -51,28 +52,26 @@ class Generator extends Component {
                     Iskikö huijarisyndrooma? Kiroiluttaako, mutta et pääse alkuun? Generoi alta
                     itsellesi tilanteeseen sopiva feministinen lause tai päästele ärräpäitä generaattorin
                 avustuksella.</p>
-                </div>
-                <div className="app">
-                    <div className="btn">
-                        <Button className="btn-quote-ajatus" onClick={this.getQuotes1}>
-                            AJATUS
+                    <div className="app">
+                        <div className="btngroup">
+                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes1}>
+                                AJATUS
                         </Button>
-                        <Button className="btn-quote-tsemppi" onClick={this.getQuotes2}>
-                            TSEMPPI
+                            <Button className="btn" id="tsemppibtn" onClick={this.getQuotes2}>
+                                TSEMPPI
                         </Button>
-                        <Button className="btn-quote-kiroilu" onClick={this.getQuotes3}>
-                            KIROILU!
+                            <Button className="btn" id="kiroilubtn" onClick={this.getQuotes3}>
+                                K*ROILU!
                         </Button>
-                    </div>
-                    <Container className="puhekupla">
-                        <div className="imgcontainer">
-                            <img className="kuva" src={image} alt="women" height="650" />
-                            <div className="quote">
-                                <p className="quote_text">{getSentence}</p>
-                            </div><br></br>
                         </div>
+                        <Container className="puhekupla">
+                        <img src={image} alt="women" height="400" />
+                            <div className="quote">
+                            <p className="quote_text">{getSentence}</p>
+                            </div><br></br>
                     </Container>
                     <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
+                </div>
                 </div>
             </Container>
         );

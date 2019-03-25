@@ -8,13 +8,14 @@ import Generator from './components/generator/GeneratorMain';
 import Board from './components/bingo/Board';
 
 import SideBar from './navigation/Sidemenu';
+import {Animated} from "react-animated-css";
 
 // Navigation and router
 
 class App extends Component {
   render() {
     return (
-      
+      <Animated animationIn="fadeIn" className="animated">
       <div id="App">
         <Router>
           <SideBar></SideBar>
@@ -28,6 +29,7 @@ class App extends Component {
             </div>
         </Router>
         </div>
+        </Animated>
     );
   }
 }

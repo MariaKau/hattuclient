@@ -10,7 +10,7 @@ export default class Home extends Component {
         <Row>
           <Col>
             <div>
-              <h1>Tervetuloa</h1>
+              <h1 className="title">Tervetuloa</h1>
               <hr className="dash"></hr>
             </div>
           </Col>

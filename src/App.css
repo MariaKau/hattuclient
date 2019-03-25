@@ -2,9 +2,11 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
+.animated {
+  animation-duration: 1.5s;
+}
 
-.App {
-  text-align: center;
+#App {
   height: 100vh;
   
 }

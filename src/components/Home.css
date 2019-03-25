@@ -1,4 +1,11 @@
 .dash {
 	border-top: 2px dashed #595859;
   
-  }
+}
+
+.title {
+	font-size: 40px;
+	color: #F24C4E;
+	padding-top: 1.5%;
+	padding-bottom: 1%;
+}
