@@ -3,7 +3,6 @@ import './GeneratorMain.css';
 import Container from 'react-bootstrap/Container'
 import image from '../generator/women.jpg';
 import Button from 'react-bootstrap/Button'
-import { Animated } from 'react-animated-css';
 
 
 class Generator extends Component {
