@@ -40,36 +40,40 @@ class Generator extends Component {
             <p key={i}>{powerQuote.sentence}</p>
         );
         return (
-            <Container fluid="true">
+            <Container className = "whole" fluid="true">
                 <div className="content">
                     <h1 className="title">Feministinen generaattori</h1>
-                    
+
                     <hr className="dash"></hr>
-                    </div>
-                    <p className="kuvailu">
-                        Iskikö huijarisyndrooma? Kiroiluttaako, mutta et pääse alkuun? Generoi alta
-                        itsellesi tilanteeseen sopiva feministinen lause tai päästele ärräpäitä generaattorin
+                </div>
+                <div className = "kuvailucontainer">
+                <p className="kuvailu">
+                    Iskikö huijarisyndrooma? Kiroiluttaako, mutta et pääse alkuun? Generoi alta
+                    itsellesi tilanteeseen sopiva feministinen lause tai päästele ärräpäitä generaattorin
                 avustuksella.</p>
-                    <div className="app">
-                        <div className="btn">
-                            <Button className="btn-quote-ajatus" onClick={this.getQuotes1}>
-                                AJATUS
+                </div>
+                <div className="app">
+                    <div className="btn">
+                        <Button className="btn-quote-ajatus" onClick={this.getQuotes1}>
+                            AJATUS
                         </Button>
-                            <Button className="btn-quote-tsemppi" onClick={this.getQuotes2}>
-                                TSEMPPI
+                        <Button className="btn-quote-tsemppi" onClick={this.getQuotes2}>
+                            TSEMPPI
                         </Button>
-                            <Button className="btn-quote-kiroilu" onClick={this.getQuotes3}>
-                                KIROILU!
+                        <Button className="btn-quote-kiroilu" onClick={this.getQuotes3}>
+                            KIROILU!
                         </Button>
-                        </div>
-                        <Container className="puhekupla">
-                        <img src={image} alt="women" height="650" />
+                    </div>
+                    <Container className="puhekupla">
+                        <div className="imgcontainer">
+                            <img className="kuva" src={image} alt="women" height="650" />
                             <div className="quote">
                                 <p className="quote_text">{getSentence}</p>
                             </div><br></br>
-                        </Container>
-                        <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
-                    </div>
+                        </div>
+                    </Container>
+                    <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
+                </div>
             </Container>
         );
     }
