@@ -65,7 +65,7 @@ class Generator extends Component {
                         </Button>
                         </div>
                         <Container className="puhekupla">
-                        <img src={image} alt="women" height="650" />
+                        <img src={image} alt="women" height="400" />
                             <div className="quote">
                             <p className="quote_text">{getSentence}</p>
                             </div><br></br>
