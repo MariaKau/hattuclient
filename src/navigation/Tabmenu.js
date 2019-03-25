@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './navigation.css';
 import Generator from '../components/generator/GeneratorMain';
 import Board from '../components/bingo/Board';
 
@@ -9,7 +10,7 @@ export default class Tabmenu extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-          key: 'home',
+          key: 'generaattori',
         };
       }
   render() {

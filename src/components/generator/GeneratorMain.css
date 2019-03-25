@@ -2,46 +2,39 @@
 	font-size: 40px;
 	color: rgb(31, 181, 161);
 	padding-top: 1.5%;
-	padding-bottom: 1%;
+	padding-bottom: 5%;
 }
 
-
-.dash {
-	border-top: 1px dashed #595859;
-	width: 80%;
-	padding-bottom: 2%;
-}
-
-.kuvailucontainer {
-
-}
 
 .btngroup {
 	display: block;
-	
+}
+
+.bubble {
+	flex-direction: column-reverse;
 }
 
 /* https://designmodo.com/3d-css3-button/ */
 .btn {
-  width: 150px;
+  width: 160px;
   height: 60px;
   /* margin-right: 4%;*/
   margin-bottom: 6%; 
   font-size: 1.2em;
-  color: #595859;
+  color: #353434;
   letter-spacing: 0.1em;
   cursor: pointer;
   border-radius: 10px;
   transition: all .3s;
-  border-bottom: 1px solid rgb(95, 62, 4);
-  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
-  box-shadow: 2px 4px 0px 0px #8f8e8da2, 2px 4px 10px 0px rgba(41, 41, 41, 0.63), inset 0px 1px 0px rgba(128, 121, 115, 0.473), inset 0px 0px 3px rgba(194, 193, 192, 0.5);
+  border: 1px solid rgb(244, 147, 37);
+  text-shadow: 0px -0.5px 0px #77767679;
+  box-shadow: 2px 4px 0px 0px #8f8e8da2, 2px 4px 10px 0px rgba(87, 87, 87, 0.63), inset 0px 1px 0px rgba(128, 121, 115, 0.473), inset 0px 0px 3px rgba(194, 193, 192, 0.5);
   transition: all .4s ease-in-out;
 }
 
 #ajatusbtn {
 	background-color: rgba(244, 158, 9, 0.900);
-	background-image: linear-gradient(to bottom, rgba(244, 158, 9, 0.900) 0%, rgba(241, 176, 64, 0.9) 100%);
+	background-image: linear-gradient(to bottom, rgba(243, 162, 23, 0.904) 0%, rgba(241, 187, 92, 0.9) 100%);
 }
 #ajatusbtn:hover {
 	box-shadow: 0px 15px 25px -5px rgba(darken(rgb(105, 94, 70), 40%));
@@ -53,7 +46,7 @@
 	transform: translate(0, 4px);
 }
 
-#tsemppibtn {
+/* #tsemppibtn {
 	background-color: #F24C4E;
 	background-image: linear-gradient(to bottom, rgb(192, 60, 62) 0%, #F24C4E 100%);
 }
@@ -79,9 +72,57 @@
 	background-image: linear-gradient(to bottom, rgb(28, 160, 145) 0%, rgb(62, 173, 166) 100%);
 	box-shadow: 0px 5px #2b638f, 0px 1px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 	transform: translate(0, 4px);
+} */
+
+/* https://leaverou.github.io/bubbly/ */
+.speechbubble {
+	position: relative;
+	background: rgba(31, 181, 161, 0.623);
+	border-radius: .4em;
+	width: 350px;
+	height: auto;
+	min-height: 200px;
+	padding: 2.5em;
 }
 
-	
+.speechbubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 2em solid transparent;
+	border-top-color: rgba(31, 181, 161, 0.623);
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -1em;
+	margin-bottom: -2em;
+}
+
+/* .bubblequote {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 1em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgb(82, 72, 72), rgb(145, 81, 81), rgb(233, 96, 96));
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+} */
+
 p.quote_text {
 	position: relative;
 	width: 350px;
@@ -123,14 +164,17 @@ p.quote_text:before {
 	left: -20px;
 	top: 31px;
 }
-.puhekupla {
+
+/* .puhekupla {
 	text-align: center;
 }
 .quote {
 	display: inline-block;
-} 
+}  */
+
 .copy {
 	font-size: 12px;
+	text-align: center;
 }
 
 
@@ -140,7 +184,7 @@ p.quote_text:before {
 	font-size: 13px;
 }
 /* image not visible in mobile */
-.kuva {
+.kuva, .copy {
 	display: none !important;
 }
 /*buttons smaller in mobile */
