@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './GeneratorMain.css';
 import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import image from '../generator/women.jpg';
-import Button from 'react-bootstrap/Button'
-import { Animated } from 'react-animated-css';
+import Button from 'react-bootstrap/Button';
+//import { Animated } from 'react-animated-css';
 
 
 class Generator extends Component {
@@ -11,7 +13,6 @@ class Generator extends Component {
         super()
         this.state = {
             quotes: [],
-            isChecked: true,
         }
         this.getQuotes1 = this.getQuotes1.bind(this);
         this.getQuotes2 = this.getQuotes2.bind(this);
@@ -42,37 +43,56 @@ class Generator extends Component {
             <p key={i}>{powerQuote.sentence}</p>
         );
         return (
-            <Container fluid="true">
-                <div className="content">
-                    <h1 className="title">Feministinen generaattori</h1>
-                    
-                    <hr className="dash"></hr>
-                    </div>
-                    <p className="kuvailu">
-                        Iskikö huijarisyndrooma? Kiroiluttaako, mutta et pääse alkuun? Generoi alta
-                        itsellesi tilanteeseen sopiva feministinen lause tai päästele ärräpäitä generaattorin
-                avustuksella.</p>
-                    <div className="app">
-                        <div className="btngroup">
-                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes1}>
-                                AJATUS
-                        </Button>
-                            <Button className="btn" id="tsemppibtn" onClick={this.getQuotes2}>
-                                TSEMPPI
-                        </Button>
-                            <Button className="btn" id="kiroilubtn" onClick={this.getQuotes3}>
-                                K*ROILU!
-                        </Button>
+            <Container className="whole" fluid="true">
+                <Row>
+                    <Col><h1 className="title">Feministinen generaattori</h1>
+                        <hr className="dash"></hr>
+                    </Col>
+                </Row>
+                <Row className="kuvailucontainer">
+                    <Col xs={1}></Col>
+                    {/* <Col xs={6} >
+                        <div>
+                            <p className="kuvailu">
+                                Iskikö huijarisyndrooma?<br></br>
+                                Kiroiluttaako, mutta et pääse alkuun?<br></br>
+                                Kaipaatko sanallista rohkaisua?<br></br></p>
+                            <p className="kysely">Valitse napeista itsellesi tilanteeseen sopiva feministinen voimalause tai rohkaisu.<br></br>
+                                Tai päästele ärräpäitä generaattorin avustuksella.</p>
                         </div>
-                        <Container className="puhekupla">
-                        <img src={image} alt="women" height="400" />
-                            <div className="quote">
-                            <p className="quote_text">{getSentence}</p>
-                            </div><br></br>
-                        </Container>
-                        <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
+                    </Col> */}
+
+
+                    <Col xs={4} className="btngroup">
+
+                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes1}>
+                            Ajatus
+                        </Button>
+                        <br />
+                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes2}>
+                            TSEMPPI
+                        </Button>
+                        <br />
+                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes3}>
+                            K*ROILU!
+                        </Button>
+
+                    </Col>
+
+                    <Col xs={1}></Col>
+                </Row>
+
+                <Container className="puhekupla">
+                    <div className="imgcontainer">
+                        <img className="kuva" src={image} alt="women" height="400" />
                     </div>
-            </Container>
+                    <div className="quote">
+                        <p className="quote_text">{getSentence}</p>
+                    </div><br></br>
+
+                    <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
+                </Container>
+            </Container >
         );
     }
 }
