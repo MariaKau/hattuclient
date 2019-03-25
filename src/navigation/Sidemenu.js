@@ -7,17 +7,11 @@ import home from './Homeicon.png';
 import quote from './Commenticon.png';
 import rocket from './Rocketicon.png';
 
-
 //https://alligator.io/react/react-burger-menu-sidebar/
 export default props => {
   return (
-<<<<<<< HEAD
-    <Menu className="sidemenu">
-      <a className="menu-item" href="/home">
-=======
     <Menu>
       <a className="menu-item" href="/">
->>>>>>> 30fcc5aa51b8def12ef6fc513f3bea122ba2c3d9
       <img className="menu-img" src={home} height="30%" width="20%" alt="Kotisivu"></img>
         Home
       </a>
