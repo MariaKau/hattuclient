@@ -6,6 +6,12 @@ class Square extends React.Component {
     super(props);
 
     this.state = {
+      history: [
+        {
+          squares: Array(16).fill(null)
+        }
+      ],
+      stepNumber: 0,
       white: true
     }
   }

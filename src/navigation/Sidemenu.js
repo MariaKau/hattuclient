@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 
 import './navigation.css';
@@ -12,7 +12,7 @@ import rocket from './Rocketicon.png';
 export default props => {
   return (
     <Menu>
-      <a className="menu-item" href="/home">
+      <a className="menu-item" href="/">
       <img className="menu-img" src={home} height="30%" width="20%" alt="Kotisivu"></img>
         Home
       </a>
