@@ -45,6 +45,7 @@ body {
     padding: 0;
     text-align: center;
     width: 200px;
+    cursor: pointer;
   }
 
   .orangeButton{
@@ -55,6 +56,28 @@ body {
   .whiteButton{
     background-color: white;
     color: black;
+  }
+
+  .alert-success {
+    color: #FBFBFB !important;
+    background-color: #1FB58F!important;
+    border-color: #1FB58F !important;
+    font-size: 25px;
+  }
+
+  .alert-heading {
+    font-size: 30px;
+  }
+
+  .btn-outline-success {
+    background-color: #1FB58F!important;
+    border-color: #898989 !important;
+  }
+
+  #refreshbtn {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
   }
 
   @media only screen and (max-width: 1024px) {

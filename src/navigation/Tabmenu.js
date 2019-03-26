@@ -4,8 +4,6 @@ import Generator from '../components/generator/GeneratorMain';
 import Board from '../components/bingo/Board';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import './Tabmenu.css';
-
 
 export default class Tabmenu extends Component {
   constructor(props) {

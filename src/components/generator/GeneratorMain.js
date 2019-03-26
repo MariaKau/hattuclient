@@ -39,7 +39,6 @@ class Generator extends Component {
     }
 
     render() {
-        console.log(this.state.quotes)
         const getSentence = this.state.quotes.map((powerQuote, i) =>
             <p key={i}>{powerQuote.sentence}</p>
         );
@@ -71,10 +70,6 @@ class Generator extends Component {
                         <div id="Rectangle">
                         <div id="SpeechBubble">{getSentence}</div>
                         </div>
-
-                        {/* <hgroup className="speechbubble">
-                        <h4 className="bubblequote">{getSentence}</h4>
-                    </hgroup> */}
                     </Col>
                 </Row>
                 <Row>
