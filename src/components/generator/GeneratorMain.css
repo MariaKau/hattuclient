@@ -19,14 +19,14 @@
   height: 60px;
   /* margin-right: 4%;*/
   margin-bottom: 4%;
-  font-size: 1.2em;
-  color: #353434;
+  font-size: 1.3em;
+  color: #f8f8f8;
   letter-spacing: 0.1em;
   cursor: pointer;
   border-radius: 10px;
   transition: all .3s;
   border: 1px solid rgb(244, 147, 37);
-  text-shadow: 0px -0.5px 0px #77767679;
+  text-shadow: 0px -0.2px 0px #77767679;
   box-shadow: 2px 4px 0px 0px #8f8e8da2, 2px 4px 10px 0px rgba(87, 87, 87, 0.63), inset 0px 1px 0px rgba(128, 121, 115, 0.473), inset 0px 0px 3px rgba(194, 193, 192, 0.5);
   transition: all .4s ease-in-out;
 }
