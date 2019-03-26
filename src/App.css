@@ -3,7 +3,7 @@ html {
 }
 
 .animated {
-  animation-duration: 1.5s;
+  animation-duration: .5s;
 }
 
 #App {
