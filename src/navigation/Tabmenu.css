@@ -1,0 +1,11 @@
+a.nav-item.nav-link {
+    color: #F24C4E;
+    font-size: 25px;
+}
+a.nav-item.nav-link.active {
+    color: #F49E09;
+    font-size: 25px;
+}
+
+
+
