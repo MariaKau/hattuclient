@@ -7,13 +7,8 @@ import './App.css';
 // import Generator from './components/generator/GeneratorMain';
 // import Board from './components/bingo/Board';
 // import SideBar from './navigation/Sidemenu';
-import {Animated} from "react-animated-css";
+import { Animated } from "react-animated-css";
 import Tabmenu from './navigation/Tabmenu';
-import Home from './components/Home';
-import Generator from './components/generator/GeneratorMain';
-import Board from './components/bingo/Board';
-
-import SideBar from './navigation/Sidemenu';
 
 // Navigation and router
 
@@ -21,15 +16,15 @@ class App extends Component {
   render() {
     return (
       <Animated animationIn="fadeIn" className="animated">
-      <div id="App">
-        
-      <Tabmenu activeTab={2} />
-          
+        <div id="App">
+
+          <Tabmenu activeTab={2} />
+
           <div id="page-wrap">
-            </div>
-        
+          </div>
+
         </div>
-        </Animated>
+      </Animated>
     );
   }
 }
