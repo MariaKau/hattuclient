@@ -17,6 +17,7 @@ class Generator extends Component {
         this.getQuotes1 = this.getQuotes1.bind(this);
         this.getQuotes2 = this.getQuotes2.bind(this);
         this.getQuotes3 = this.getQuotes3.bind(this);
+
     }
 
     getQuotes1() {
@@ -38,16 +39,15 @@ class Generator extends Component {
             .catch((err) => { throw err })
     }
 
-    handleStateChange() {
-
-
-    }
 
     render() {
         console.log(this.state.quotes)
         const getSentence = this.state.quotes.map((powerQuote, i) =>
-        <Animated animationIn="tada"><p key={i}>{powerQuote.sentence}</p></Animated>
+            <p key={i}>{powerQuote.sentence}</p>
         );
+
+    
+
         return (
             <Container className="whole" fluid="true">
                 <Row>
@@ -57,7 +57,7 @@ class Generator extends Component {
                 <Row className="kuvailucontainer">
 
                     <Col md={{ span: 3, offset: 3 }} className="btngroup">
-                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes1}>
+                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes1} >
                             Päivän ajatus
                         </Button>
                         <br />
@@ -70,14 +70,18 @@ class Generator extends Component {
                         </Button>
                     </Col>
                     <Col md={4} className="bubble">
-                    <hgroup className="speechbubble">
+                        <div id="Rectangle">
+                        <div id="SpeechBubble">{getSentence}</div>
+                        </div>
+
+                        {/* <hgroup className="speechbubble">
                         <h4 className="bubblequote">{getSentence}</h4>
-                    </hgroup>
+                    </hgroup> */}
                     </Col>
                 </Row>
                 <Row>
                     <Col md={{ span: 6, offset: 3 }}>
-                            <img className="kuva" src={image} alt="women" style={{width: "100%", height: "auto"}}  />
+                        <img className="kuva" src={image} alt="women" style={{ width: "100%", height: "auto" }} />
                         <p className="copy">Image created by rawpixel.com - www.freepik.com</p>
                     </Col>
                 </Row>
