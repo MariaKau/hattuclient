@@ -5,10 +5,9 @@ import './App.css';
 // import Container from 'react-bootstrap/Container'
 import Home from './components/Home';
 import Generator from './components/generator/GeneratorMain';
-// import Board from './components/bingo/Board';
+import Board from './components/bingo/Board';
 
 import SideBar from './navigation/Sidemenu';
-import BingoGame from './components/bingo/BingoGame';
 
 // Navigation and router
 
@@ -24,7 +23,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={() => (<Home />)}></Route>
               <Route path="/generaattori" render={() => (<Generator />)}></Route>
-              <Route path="/bingo" render={() => (<BingoGame />)}></Route>
+              <Route path="/bingo" render={() => (<Board />)}></Route>
             </Switch>
             </div>
         </Router>

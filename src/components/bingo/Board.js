@@ -5,16 +5,13 @@ import './Bingo.css';
 class Board extends React.Component {
 
   constructor(props) {
-    super(props)
+    super(props);
+
     this.state = {
-      history: [
-        {
-          squares: Array(16).fill(null)
-        }
-      ],
-      stepNumber: 0,
-      quotes: []
-    }
+      quotes: [],
+      white: true,
+      clickedSquares: Array(16).fill(false)
+    };
   }
 
   componentDidMount() {
@@ -33,30 +30,42 @@ class Board extends React.Component {
       .catch((err) => { throw err })
   }
 
+  handleClick = (number) => {
+    console.log("Clickattu");
+    this.setState({
+      clickedSquares: !this.state.clickedSquares
+    });
+    this.getBingo();
+  }
+
+  getBingo = () => {
+    const lines = [
+        [0, 1, 2, 3],
+        [4, 5, 6, 7],
+        [8, 9, 10, 11],
+        [12, 13, 14, 15],
+        [0, 4, 8, 12],
+        [1, 5, 9, 13],
+        [2, 6, 10, 14],
+        [3, 7, 11, 15]
+    ];
+    for (let i = 0; i < lines.length; i++) {
+        const [a, b, c, d] = lines[i];
+        console.log(this.state.quotes[a].clickedSquares);
+        if (this.state.quotes.clickedSquares && this.state.quotes.clickedSquares && this.state.quotes.clickedSquares && this.state.quotes.clickedSquares) {
+            return alert("BINGO!");
+        }
+    }
+    return this.state.clickedSquares;
+}
+
   renderSquare = (number) => {
     if (number >= this.state.quotes.length)
       return <Square quote="Bingo latautuu..."></Square>
     return (
-      <Square quote={this.state.quotes[number].quote} onClick={() => this.props.onClick(number)}/>
+      <Square quote={this.state.quotes[number].quote} number={number} checkBingo={this.handleClick}/>
     );
   }
-
-  // getBingo = (squares) => {
-  //   const lines = [
-  //     [0, 1, 2, 3],
-  //     [4, 5, 6, 7],
-  //     [8, 9, 10, 11],
-  //     [12, 13, 14, 15]
-  //   ];
-  //   for (let i=0; i < lines.length; i++) {
-  //     const [a, b, c, d] = lines[i];
-  //     if (squares[a] === squares[b] === squares[c] === squares[d]) {
-  //       return squares[a];
-  //     }
-  //   }
-  //   alert("BINGO!");
-  //   return null;
-  // }
 
   render() {
 
