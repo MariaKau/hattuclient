@@ -180,7 +180,7 @@ p.quote_text:before {
 
 @media only screen and (max-width: 420px) {
 .kuvailu {
-	font-size: 13px;
+	font-size: 10px;
 }
 /* image not visible in mobile */
 .kuva, .copy {
@@ -192,10 +192,9 @@ p.quote_text:before {
 	width: 60px;
 	font-size: 0.4em;
 }
-
 /* title smaller in mobile */
 .title {
-	font-size: 25px;
+	font-size: 15px;
 }
 /* speech bubble smaller in mobile*/
 p.quote_text {

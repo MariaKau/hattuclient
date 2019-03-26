@@ -38,11 +38,6 @@ class Generator extends Component {
             .catch((err) => { throw err })
     }
 
-    handleStateChange() {
-
-
-    }
-
     render() {
         console.log(this.state.quotes)
         const getSentence = this.state.quotes.map((powerQuote, i) =>
