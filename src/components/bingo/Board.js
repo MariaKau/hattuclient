@@ -30,7 +30,7 @@ class Board extends React.Component {
     this.getData();
   }
 
-  getData = () => {
+  getNewBingoTable = () => {
     this.setState({ quotes: [],
       white: true,
       squares: [],
@@ -45,6 +45,11 @@ class Board extends React.Component {
         [3, 7, 11, 15]
       ],
       show: false });
+    
+    this.getData();
+  }
+
+  getData = () => {
     fetch('https://hattu-server.herokuapp.com/api/bingo', {
       mode: 'cors',
       headers: {
@@ -57,6 +62,8 @@ class Board extends React.Component {
   }
 
   handleClick = (number) => {
+    this.setState({ white: !this.state.white });
+    console.log(this.state.quotes)
     let quoteID = this.state.quotes[number].id;
     console.log(quoteID);
     this.state.squares.includes(quoteID)
@@ -76,7 +83,7 @@ class Board extends React.Component {
     const lines = this.state.lines;
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c, d] = lines[i];
-      if (this.state.squares[a] && this.state.squares[b] && this.state.squares[c] && this.state.squares[d]) {
+      if (this.state.squares.includes(this.state.quotes[a].id) && this.state.squares.includes(this.state.quotes[b].id) && this.state.squares.includes(this.state.quotes[c].id) && this.state.squares.includes(this.state.quotes[d].id)) {
         this.setState({ show: true });
         return this.setState({
           lines: this.state.lines.filter(function (line) {
@@ -88,10 +95,13 @@ class Board extends React.Component {
   }
 
   renderSquare = (number) => {
+    let square = this.state.white ? "whiteButton" : "orangeButton";
+    console.log(square);
+
     if (number >= this.state.quotes.length)
       return <Square quote="Bingo latautuu..."></Square>
     return (
-      <Square quote={this.state.quotes[number].quote} number={number} checkBingo={this.handleClick} />
+      <Square className={square} quote={this.state.quotes[number].quote} number={number} checkBingo={this.handleClick} white={this.state.white}/>
     );
   }
 
@@ -136,8 +146,8 @@ class Board extends React.Component {
             {this.renderSquare(15)}
           </div>
           <div id="refreshbtn">
-          <Button variant="outline-success" onClick={this.getData}>
-            Uusi Bingo
+          <Button variant="outline-success" onClick={this.getNewBingoTable}>
+            Uusi peli
           </Button>
           </div>
         </div>

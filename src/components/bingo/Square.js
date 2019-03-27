@@ -6,21 +6,20 @@ class Square extends React.Component {
     super(props);
 
     this.state = {
-      white: true,
-      clickedSquares: []
+      white: this.props.white
     }
   }
 
-  changeColor() {
-    this.setState({ white: !this.state.white });
+  changeColor = () => {
+    // this.setState({ white: !this.state.white });
     this.props.checkBingo(this.props.number);
   }
 
   render() {
-    let square = this.state.white ? "whiteButton" : "orangeButton";
+    // let square = this.state.white ? "whiteButton" : "orangeButton";
 
     return (
-      <button className={square} id="square" onClick={this.changeColor.bind(this)}>
+      <button className={this.props.className} id="square" onClick={this.changeColor}>
         {this.props.quote}
       </button>
     )
