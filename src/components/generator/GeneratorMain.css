@@ -126,9 +126,6 @@ p.quote_text:before {
 }
 
   
-  .quote {
-	display: inline-block !important;
-  }
   .whole {
 	  display: flex !important;
 	  flex-direction: column !important;
