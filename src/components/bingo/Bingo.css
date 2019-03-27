@@ -57,6 +57,10 @@ body {
     background-color: white;
     color: black;
   }
+  .bingoButton{
+    background-color: #F24C4E!important;
+    color: black;
+  }
 
   .alert-success {
     color: #FBFBFB !important;
