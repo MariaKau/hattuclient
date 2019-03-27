@@ -1,11 +1,15 @@
 a.nav-item.nav-link {
-    color: #F24C4E;
-    font-size: 25px;
+    color: #F24C4E !important;
+    font-size: 25px !important;
 }
 a.nav-item.nav-link.active {
-    color: #F49E09;
-    font-size: 25px;
+    color: #F49E09 !important;
+    font-size: 25px !important;
 }
 
-
+/* @media print {
+    a.nav-item.nav-link a.nav-item.nav-link.active {
+    display: none;
+    }
+} */
 
