@@ -7,6 +7,8 @@ import image from '../generator/women.jpg';
 import Button from 'react-bootstrap/Button';
 //import { Animated } from 'react-animated-css';
 import Bubble from './Bubble';
+import Bubble2 from './Bubble2';
+import Bubble3 from './Bubble3';
 
 
 class Generator extends Component {
@@ -15,6 +17,8 @@ class Generator extends Component {
         this.state = {
             quotes: [],
             animateBubble: true,
+            category: null
+            
         }
         this.getQuotes1 = this.getQuotes1.bind(this);
         this.getQuotes2 = this.getQuotes2.bind(this);
@@ -26,20 +30,20 @@ class Generator extends Component {
         fetch('https://hattu-server.herokuapp.com/api/ajatus/:ajatus', { mode: 'cors' })
             .then(res => res.json())
             .then(data => {
-                this.setState({ quotes: data, animateBubble: true });
+                this.setState({ quotes: data, category: "ajatus", animateBubble: true });
             })
             .catch((err) => { throw err })
     }
     getQuotes2() {
         fetch('https://hattu-server.herokuapp.com/api/tsemppi/:tsemppi', { mode: 'cors' })
             .then(res => res.json())
-            .then(data => this.setState({ quotes: data, animateBubble: true  }))
+            .then(data => this.setState({ quotes: data, category: "tsemppi", animateBubble: true  }))
             .catch((err) => { throw err })
     }
     getQuotes3() {
         fetch('https://hattu-server.herokuapp.com/api/kiroilu/:kiroilu', { mode: 'cors' })
             .then(res => res.json())
-            .then(data => this.setState({ quotes: data, animateBubble: true  }))
+            .then(data => this.setState({ quotes: data, category: "kiroilu", animateBubble: true  }))
             .catch((err) => { throw err })
     }
 
@@ -50,9 +54,15 @@ class Generator extends Component {
     render() {
         console.log(this.state.quotes)
         const getSentence = this.state.quotes.map((powerQuote, i) => {
-
+        if(this.state.category === "ajatus") {
             return <Bubble key={i} value={powerQuote} animate={this.state.animateBubble} doneAnimating={this.animationDone} />
-        });
+        } if (this.state.category === "tsemppi") {
+            return <Bubble2 key={i} value={powerQuote} animate={this.state.animateBubble} doneAnimating={this.animationDone} />
+        } if (this.state.category === "kiroilu") {
+            return <Bubble3 key={i} value={powerQuote} animate={this.state.animateBubble} doneAnimating={this.animationDone} />
+        }
+    });
+
 
         return (
             <Container className="whole" fluid="true">
@@ -62,22 +72,22 @@ class Generator extends Component {
                 </Row>
                 <Row className="kuvailucontainer">
 
-                    <Col md={{ span: 3, offset: 3 }} className="btngroup">
+                    <Col md={{ span: 3, offset: 2 }} className="btngroup">
                         <Button className="btn" id="ajatusbtn" onClick={this.getQuotes1} >
                             Päivän ajatus
                         </Button>
                         <br />
-                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes2}>
+                        <Button className="btn" id="tsemppibtn" onClick={this.getQuotes2}>
                             Tsemppi
                         </Button>
                         <br />
-                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes3}>
+                        <Button className="btn" id="kiroilubtn" onClick={this.getQuotes3}>
                             K*ROILU!
                         </Button>
                     </Col>
                     <Col md={4} className="bubble">
                         <div id="Rectangle">
-                        <div >{getSentence}</div>
+                        <div>{getSentence}</div>
                         </div>
                     </Col>
                 </Row>

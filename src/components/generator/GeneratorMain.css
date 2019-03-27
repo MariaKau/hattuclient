@@ -7,7 +7,7 @@
 
 .btngroup {
 	display: block;
-	padding-bottom: 10%;
+	padding-bottom: 9%;
 }
 
 /* .bubble {
@@ -30,18 +30,17 @@
   text-shadow: 0px -0.2px 0px #a1a1a179;
   box-shadow: 2px 4px 0px 0px #8f8d8da2, 2px 4px 10px 0px rgba(87, 87, 87, 0.63), inset 0px 1px 0px rgba(128, 115, 115, 0.473), inset 0px 0px 3px rgba(194, 192, 192, 0.5);
   transition: all .4s ease-in-out;
+  background-color: rgba(242, 76, 79, 0.719);
+  background-image: linear-gradient(to bottom, rgba(245, 84, 87, 0.747) 0%, rgb(248, 134, 136) 100%);
 }
 
-#ajatusbtn {
-	background-color: rgba(242, 76, 79, 0.719);
-	background-image: linear-gradient(to bottom, rgba(245, 84, 87, 0.747) 0%, rgb(248, 134, 136) 100%);
-}
-#ajatusbtn:hover {
+
+.btn:hover {
 	box-shadow: 0px 15px 25px -5px rgba(darken(rgb(105, 94, 70), 40%));
 	transform: scale(1.05)
 }
-#ajatusbtn:active {
-	background-image: linear-gradient(to bottom, rgba(240, 38, 41, 0.829) 0%, rgba(242, 76, 79, 0.719) 100%);
+.btn:active {
+	background-image: linear-gradient(to bottom, rgba(240, 38, 41, 0.74) 0%, rgba(242, 76, 79, 0.719) 100%);
 	box-shadow: 0px 5px #2b638f, 0px 1px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 	transform: translate(0, 4px);
 	
@@ -75,84 +74,8 @@
 	transform: translate(0, 4px);
 } */
 
-/* https://leaverou.github.io/bubbly/ */
-#SpeechBubble {
-	text-align: center;
-	font-size: 1.5em;
-	position: relative;
-	background: rgba(31, 181, 161, 0.438);
-	border-radius: .9em;
-	background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
-	width: 350px;
-	height: auto;
-	min-height: 150px;
-	max-height: 250px;
-	padding: 1em;
-}
 
-#SpeechBubble.AnimatingBubble {
-	animation-name: jump;
-	animation-duration: 0.25s;
-}
 
-#SpeechBubble:after {
-	overflow: hidden;
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 2em solid transparent;
-	border-top-color: rgba(31, 181, 161, 0.438);
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -1em;
-	margin-bottom: -2em;
-	
-}
-@keyframes jump {
-	0% {
-	  transform: scale(0);
-	}
-	50% {
-	  transform: scale(1.25);
-	}
-	100% {
-	  transform: scale(1);
-	}
-  }
-  @keyframes shrink {
-	0% {
-	  transform: scale(1);
-	}
-	100% {
-	  transform: scale(0);
-	}
-  }
-
-/* .bubblequote {
-  position: relative;
-  font-family: sans-serif;
-  font-size: 1em;
-  letter-spacing: 4px;
-  overflow: hidden;
-  background: linear-gradient(90deg, rgb(82, 72, 72), rgb(145, 81, 81), rgb(233, 96, 96));
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 3s infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
-}
-
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
-  }
-} */
 
 p.quote_text {
 	position: relative;
