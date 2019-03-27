@@ -66,22 +66,30 @@ body {
     color: #FBFBFB !important;
     background-color: #1FB58F!important;
     border-color: #1FB58F !important;
-    font-size: 25px;
+    font-size: 2.5vmax;
   }
 
   .alert-heading {
-    font-size: 30px;
+    font-size: 5vmax;
+  }
+
+  p {
+    margin-bottom: 0rem !important;
   }
 
   .btn-outline-success {
     background-color: #1FB58F!important;
     border-color: #898989 !important;
+    margin-bottom: 1% !important;
+    font-size: 2vmax !important;
   }
 
   #refreshbtn {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: auto;
+    padding: auto;
   }
 
   @media only screen and (max-width: 1024px) {
