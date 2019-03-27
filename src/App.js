@@ -1,30 +1,18 @@
 import React, { Component } from 'react';
-//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-//import Navigation from './navigation/Navigation';
 import './App.css';
-// import Container from 'react-bootstrap/Container'
-// import Home from './components/Home';
-// import Generator from './components/generator/GeneratorMain';
-// import Board from './components/bingo/Board';
-// import SideBar from './navigation/Sidemenu';
-import { Animated } from "react-animated-css";
 import Tabmenu from './navigation/Tabmenu';
+import './navigation/Tabmenu.css';
 
 // Navigation and router
 
 class App extends Component {
   render() {
     return (
-      <Animated animationIn="fadeIn" className="animated">
         <div id="App">
-
           <Tabmenu activeTab={2} />
-
           <div id="page-wrap">
           </div>
-
         </div>
-      </Animated>
     );
   }
 }

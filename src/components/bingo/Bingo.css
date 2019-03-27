@@ -143,3 +143,15 @@ body {
       width: 48px;
     }
   }
+
+  @media print {
+    #refreshbtn {
+      display: none;
+    }
+    a:after {
+      content: "("attr(href)")";
+    }
+    a.nav-item.nav-link {
+      display: none;
+    }
+  }

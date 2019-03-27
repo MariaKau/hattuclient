@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 // import React, { Component } from 'react';
 // import { slide as Menu } from 'react-burger-menu';
-=======
-// // import React, { Component } from 'react';
-// // import { slide as Menu } from 'react-burger-menu';
->>>>>>> c234accd12a3ec4ba678fcb3a22f26d377520354
 
 // // import './navigation.css';
 // // import bingo from './Bingoicon.png';
