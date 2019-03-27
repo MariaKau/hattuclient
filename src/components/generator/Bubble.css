@@ -1,0 +1,49 @@
+/* https://leaverou.github.io/bubbly/ */
+#SpeechBubble {
+	text-align: center;
+	font-size: 1.5em;
+	position: absolute;
+	bottom: 30%;
+	left: 20%;
+	background: rgba(31, 181, 161, 0.438);
+	border-radius: .9em;
+	background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
+	min-width: 200px;
+	max-width: 350px;
+	height: auto;
+	min-height: 100px;
+	max-height: 250px;
+	padding: 1em;
+}
+
+#SpeechBubble.AnimatingBubble {
+	animation-name: bounce;
+	animation-duration: 0.7s;
+}
+#SpeechBubble:after {
+	overflow: hidden;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 2em solid transparent;
+	border-top-color: rgba(31, 181, 161, 0.438);
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -1em;
+	margin-bottom: -2em;
+}
+
+@keyframes bounce {
+	0% {
+	  transform: scale(0);
+	}
+	50% {
+	  transform: scale(1.25);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
