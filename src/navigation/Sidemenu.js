@@ -1,5 +1,5 @@
-// // import React, { Component } from 'react';
-// // import { slide as Menu } from 'react-burger-menu';
+// import React, { Component } from 'react';
+// import { slide as Menu } from 'react-burger-menu';
 
 // // import './navigation.css';
 // // import bingo from './Bingoicon.png';

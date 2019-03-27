@@ -7,10 +7,10 @@ import Tabmenu from './navigation/Tabmenu';
 class App extends Component {
   render() {
     return (
-      <div id="App">
-          <Tabmenu></Tabmenu>
+        <div id="App">
+          <Tabmenu activeTab={2} />
           <div id="page-wrap">
-            </div>
+          </div>
         </div>
     );
   }

@@ -5,14 +5,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import image from '../generator/women.jpg';
 import Button from 'react-bootstrap/Button';
-import { Animated } from 'react-animated-css';
+//import { Animated } from 'react-animated-css';
+import Bubble from './Bubble';
 
 
 class Generator extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             quotes: [],
+            animateBubble: true,
         }
         this.getQuotes1 = this.getQuotes1.bind(this);
         this.getQuotes2 = this.getQuotes2.bind(this);
@@ -23,30 +25,34 @@ class Generator extends Component {
     getQuotes1() {
         fetch('https://hattu-server.herokuapp.com/api/ajatus/:ajatus', { mode: 'cors' })
             .then(res => res.json())
-            .then(data => this.setState({ quotes: data }))
+            .then(data => {
+                this.setState({ quotes: data, animateBubble: true });
+            })
             .catch((err) => { throw err })
     }
     getQuotes2() {
         fetch('https://hattu-server.herokuapp.com/api/tsemppi/:tsemppi', { mode: 'cors' })
             .then(res => res.json())
-            .then(data => this.setState({ quotes: data }))
+            .then(data => this.setState({ quotes: data, animateBubble: true  }))
             .catch((err) => { throw err })
     }
     getQuotes3() {
         fetch('https://hattu-server.herokuapp.com/api/kiroilu/:kiroilu', { mode: 'cors' })
             .then(res => res.json())
-            .then(data => this.setState({ quotes: data }))
+            .then(data => this.setState({ quotes: data, animateBubble: true  }))
             .catch((err) => { throw err })
     }
 
+    animationDone = () => {
+        this.setState({animateBubble: false});
+    }
 
     render() {
         console.log(this.state.quotes)
-        const getSentence = this.state.quotes.map((powerQuote, i) =>
-            <p key={i}>{powerQuote.sentence}</p>
-        );
+        const getSentence = this.state.quotes.map((powerQuote, i) => {
 
-    
+            return <Bubble key={i} value={powerQuote} animate={this.state.animateBubble} doneAnimating={this.animationDone} />
+        });
 
         return (
             <Container className="whole" fluid="true">
@@ -71,7 +77,7 @@ class Generator extends Component {
                     </Col>
                     <Col md={4} className="bubble">
                         <div id="Rectangle">
-                        <div id="SpeechBubble">{getSentence}</div>
+                        <div >{getSentence}</div>
                         </div>
 
                         {/* <hgroup className="speechbubble">
