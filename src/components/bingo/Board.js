@@ -10,7 +10,7 @@ class Board extends React.Component {
 
     this.state = {
       quotes: [],
-      white: true,
+      white: Array(16).fill(true),
       squares: [],
       lines: [
         [0, 1, 2, 3],
@@ -22,17 +22,22 @@ class Board extends React.Component {
         [2, 6, 10, 14],
         [3, 7, 11, 15]
       ],
+      bingoFound: false,
+      bingoLines: [],
       show: false
     };
   }
 
+  //Get data from db in randomized order
   componentDidMount() {
     this.getData();
   }
 
+  //Refresh the page, set table and arrays default
   getNewBingoTable = () => {
-    this.setState({ quotes: [],
-      white: true,
+    this.setState({
+      quotes: [],
+      white: Array(16).fill(true),
       squares: [],
       lines: [
         [0, 1, 2, 3],
@@ -44,11 +49,15 @@ class Board extends React.Component {
         [2, 6, 10, 14],
         [3, 7, 11, 15]
       ],
-      show: false });
-    
+      bingoFound: false,
+      bingoLines: [],
+      show: false
+    });
+
     this.getData();
   }
 
+  //Fetch data from database
   getData = () => {
     fetch('https://hattu-server.herokuapp.com/api/bingo', {
       mode: 'cors',
@@ -61,11 +70,13 @@ class Board extends React.Component {
       .catch((err) => { throw err })
   }
 
+  //When square is clicked, it will change its color, 
+  //quotes id will be added in squares array (representing clicked squares) and
+  //function will call getBingo-function
+
   handleClick = (number) => {
-    this.setState({ white: !this.state.white });
-    console.log(this.state.quotes)
+    this.state.white[number] = !this.state.white[number];
     let quoteID = this.state.quotes[number].id;
-    console.log(quoteID);
     this.state.squares.includes(quoteID)
       ? this.setState({
         squares: this.state.squares.filter(function (square) {
@@ -78,30 +89,51 @@ class Board extends React.Component {
     this.getBingo();
   }
 
+  //Function will set state of Alert showing as false and bingoFound as default
+  //With for loop function will check if any of the lines is Bingo line
+  //If line is Bingo line, it will be pushed to this.state.bingoLines array
+  //If line is Bingo line, Alert will be set as show: true and bingoFound: true
+
   getBingo = () => {
-    this.setState({ show: false });
+    this.setState({ show: false, bingoFound: false });
+    console.log(this.state.bingoFound)
     const lines = this.state.lines;
     for (let i = 0; i < lines.length; i++) {
+      // if (this.state.bingoLines.includes[i]) continue;
       const [a, b, c, d] = lines[i];
       if (this.state.squares.includes(this.state.quotes[a].id) && this.state.squares.includes(this.state.quotes[b].id) && this.state.squares.includes(this.state.quotes[c].id) && this.state.squares.includes(this.state.quotes[d].id)) {
-        this.setState({ show: true });
-        return this.setState({
-          lines: this.state.lines.filter(function (line) {
-            return line !== lines[i]
+        this.setState({ bingoFound: true });
+        if (this.state.bingoLines.includes(i)) {
+          this.setState({
+            bingoLines: this.state.bingoLines.filter(function (bline) {
+              return bline !== i
+            })
           })
-        })
+        } else {
+          this.state.bingoLines.push(i);
+          this.setState({ show: true })
+        }
       }
     }
+    console.log("Bingolines: " + this.state.bingoLines)
   }
 
+  //Render one square taking number as parameter
+  //
   renderSquare = (number) => {
-    let square = this.state.white ? "whiteButton" : "orangeButton";
-    console.log(square);
+
+    let isInBingo = false;
+    if (this.state.bingoFound) {
+      for (let bline of this.state.bingoLines) {
+        if (this.state.lines[bline].includes(number))
+          isInBingo = true;
+      }
+    }
 
     if (number >= this.state.quotes.length)
       return <Square quote="Bingo latautuu..."></Square>
     return (
-      <Square className={square} quote={this.state.quotes[number].quote} number={number} checkBingo={this.handleClick} white={this.state.white}/>
+      <Square bingoSquare={isInBingo} quote={this.state.quotes[number].quote} number={number} checkBingo={this.handleClick} white={this.state.white[number]} />
     );
   }
 
@@ -113,7 +145,7 @@ class Board extends React.Component {
           <Alert.Heading>BINGO!</Alert.Heading>
           <p>Ohhoh, taidat olla aikamoisen setämiehen seurassa!
           </p>
-          <br/>
+          <br />
           <div className="d-flex justify-content-end">
             <Button onClick={handleHide} variant="outline-success">
               Sulje
@@ -146,8 +178,8 @@ class Board extends React.Component {
             {this.renderSquare(15)}
           </div>
           <div id="refreshbtn">
-          <Button variant="outline-success" onClick={this.getNewBingoTable}>
-            Uusi peli
+            <Button variant="outline-success" onClick={this.getNewBingoTable}>
+              Uusi peli
           </Button>
           </div>
         </div>
