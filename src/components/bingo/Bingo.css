@@ -61,7 +61,7 @@ body {
   .alert-success {
     color: #FBFBFB !important;
     background-color: #1FB58F!important;
-    border-color: #1FB58F !important;
+    border-color: #F49E09 !important;
     font-size: 25px;
   }
 
@@ -138,5 +138,8 @@ body {
     }
     a:after {
       content: "("attr(href)")";
+    }
+    a.nav-item.nav-link {
+      display: none;
     }
   }

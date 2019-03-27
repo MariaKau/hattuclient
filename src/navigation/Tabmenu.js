@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './navigation.css';
 import Generator from '../components/generator/GeneratorMain';
 import Board from '../components/bingo/Board';
-import './navigation.css';
+import './Tabmenu.css'
 import {Animated} from "react-animated-css";
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
