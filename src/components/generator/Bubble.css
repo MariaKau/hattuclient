@@ -3,16 +3,11 @@
 	text-align: center;
 	font-size: 1.5em;
 	position: absolute;
-	bottom: 30%;
-	left: 20%;
-	background: rgba(31, 181, 161, 0.438);
+	left: 400px;
+	background: rgba(79, 182, 168, 0.438);
 	border-radius: .9em;
-	background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
-	min-width: 200px;
-	max-width: 350px;
-	height: auto;
-	min-height: 100px;
-	max-height: 250px;
+	background-image: linear-gradient(to bottom, rgba(92, 180, 168, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
+	min-width: 300px;
 	padding: 1em;
 }
 
@@ -20,7 +15,8 @@
 	animation-name: bounce;
 	animation-duration: 0.7s;
 }
-#SpeechBubble:after {
+
+#SpeechBubble :after {
 	overflow: hidden;
 	content: '';
 	position: absolute;
@@ -35,6 +31,28 @@
 	margin-left: -1em;
 	margin-bottom: -2em;
 }
+/* creates opening quotation mark */
+#SpeechBubble:before {
+  content: "\201C";
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 5px;
+  font: 60px/1 Georgia, serif;
+  color:rgba(12, 68, 61, 0.966);
+}
+
+/* creates closing quotation mark */
+#SpeechBubble:after {
+  content: "\201D";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 5px;
+  font: 60px/0.25 Georgia, serif;
+  color:rgba(12, 68, 61, 0.966);
+}
+
 
 @keyframes bounce {
 	0% {
@@ -46,4 +64,144 @@
 	100% {
 	  transform: scale(1);
 	}
-  }
+	}
+
+/* speech bubble smaller in mobile*/
+@media only screen and (max-width: 420px) {
+	/* speech bubble smaller in mobile*/
+	#SpeechBubble {
+			text-align: center;
+			font-size: 0.8em;
+			position: relative;
+			left: 40px;
+			background: rgba(31, 181, 161, 0.438);
+			border-radius: .9em;
+			background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
+			min-width: 100px;
+			width: 170px;
+			height: auto;
+			min-height: 100px;
+			max-height: 200px;
+			padding: 1em;
+			animation-name: expand-bounce;
+			animation-duration: 0.25s;
+			}
+			#SpeechBubble.AnimatingBubble {
+					animation: none;
+			}
+			#SpeechBubble :after {
+			overflow: hidden;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 0;
+			border: 2em solid transparent;
+			border-top-color: rgba(31, 181, 161, 0.438);
+			border-bottom: 0;
+			border-left: 0;
+			margin-left: -1em;
+			margin-bottom: -2em;
+			}
+			#SpeechBubble:before {
+				display: none;
+			}
+			#SpeechBubble:after {
+				display: none;
+			}
+	
+	}
+	
+	@media screen and (min-width: 421px) and (max-width: 768px) {
+	
+	#SpeechBubble {
+			text-align: center;
+			font-size: 1em;
+			position: relative;
+			background: rgba(31, 181, 161, 0.438);
+			border-radius: .9em;
+			background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
+			width: 250px;
+			height: auto;
+			min-height: 150px;
+			max-height: 150px;
+			padding: 1em;
+			animation-name: expand-bounce;
+			animation-duration: 0.25s;
+			}
+	#SpeechBubble :after {
+			overflow: hidden;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 0;
+			border: 2em solid transparent;
+			border-top-color: rgba(31, 181, 161, 0.438);
+			border-bottom: 0;
+			border-left: 0;
+			margin-left: -1em;
+			margin-bottom: -2em;
+	}
+	#SpeechBubble:before {
+		display: none;
+	}
+	#SpeechBubble:after {
+		display: none;
+	}
+	
+	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		#SpeechBubble {
+			text-align: center;
+			font-size: 1.2em;
+			position: relative;
+			left: 100px;
+			background: rgba(79, 182, 168, 0.438);
+			border-radius: .9em;
+			background-image: linear-gradient(to bottom, rgba(92, 180, 168, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
+			min-width: 300px;
+			padding: 1em;
+		}
+		#SpeechBubble.AnimatingBubble {
+			animation-name: bounce;
+			animation-duration: 0.7s;
+		}
+		
+		#SpeechBubble :after {
+			overflow: hidden;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 0;
+			border: 2em solid transparent;
+			border-top-color: rgba(31, 181, 161, 0.438);
+			border-bottom: 0;
+			border-left: 0;
+			margin-left: -1em;
+			margin-bottom: -2em;
+		}
+		#SpeechBubble:before {
+			display: none;
+		}
+		#SpeechBubble:after {
+			display: none;
+		}
+		
+		
+		@keyframes bounce {
+			0% {
+				transform: scale(0);
+			}
+			50% {
+				transform: scale(1.25);
+			}
+			100% {
+				transform: scale(1);
+			}
+			}
+	}

@@ -86,7 +86,7 @@ class Generator extends Component {
                         </Button>
                     </Col>
                     <Col md={4} className="bubble">
-                        <div id="Rectangle">
+                        <div>
                         <div>{getSentence}</div>
                         </div>
                     </Col>
