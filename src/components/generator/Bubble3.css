@@ -7,7 +7,7 @@
 	border-radius: 4em;
 	background-image: linear-gradient(to bottom, rgba(241, 163, 166, 0.863) 0%, rgba(241, 203, 204, 0.911) 100%);
     min-width: 150px;
-    max-width: 600px;
+    max-width: 400px;
 	height: auto;
 	min-height: 100px;
 	max-height: 250px;
@@ -17,7 +17,7 @@
 
 #SpeechBubble3.AnimatingBubble3 {
 	animation-name: bounce;
-	animation-duration: 0.3s;
+	animation-duration: 0.4s;
 }
 #SpeechBubble3:after {
 	overflow: hidden;
@@ -39,7 +39,7 @@
 	  transform: scale(0);
 	}
 	50% {
-	  transform: scale(1.25);
+	  transform: scale(1.5);
 	}
 	100% {
 	  transform: scale(1);
@@ -61,7 +61,7 @@
     min-height: 100px;
     max-height: 100px;
     padding: 1em;
-    animation-name: expand-bounce;
+    animation-name: bounce;
     animation-duration: 0.25s;
     }
     #SpeechBubble3.AnimatingBubble3 {
@@ -100,7 +100,7 @@
     min-height: 150px;
     max-height: 150px;
     padding: 1em;
-    animation-name: expand-bounce;
+    animation-name: bounce;
     animation-duration: 0.25s;
     }
 #SpeechBubble3:after {
@@ -134,7 +134,7 @@
     }
     #SpeechBubble3.AnimatingBubble3 {
         animation-name: bounce;
-        animation-duration: 0.7s;
+        animation-duration: 0.4s;
     }
     
     #SpeechBubble3 :after {
@@ -160,7 +160,7 @@
             transform: scale(0);
         }
         50% {
-            transform: scale(1.25);
+            transform: scale(1.5);
         }
         100% {
             transform: scale(1);

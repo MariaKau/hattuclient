@@ -59,7 +59,7 @@
 	  transform: scale(0);
 	}
 	50% {
-	  transform: scale(1.25);
+	  transform: scale(1.2);
 	}
 	100% {
 	  transform: scale(1);
@@ -83,7 +83,7 @@
 			min-height: 100px;
 			max-height: 200px;
 			padding: 1em;
-			animation-name: expand-bounce;
+			animation-name: bounce;
 			animation-duration: 0.25s;
 			}
 			#SpeechBubble.AnimatingBubble {
@@ -119,6 +119,7 @@
 			text-align: center;
 			font-size: 1em;
 			position: relative;
+			left: 40px;
 			background: rgba(31, 181, 161, 0.438);
 			border-radius: .9em;
 			background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
@@ -127,7 +128,7 @@
 			min-height: 150px;
 			max-height: 150px;
 			padding: 1em;
-			animation-name: expand-bounce;
+			animation-name: bounce;
 			animation-duration: 0.25s;
 			}
 	#SpeechBubble :after {
@@ -198,7 +199,7 @@
 				transform: scale(0);
 			}
 			50% {
-				transform: scale(1.25);
+				transform: scale(1.2);
 			}
 			100% {
 				transform: scale(1);
