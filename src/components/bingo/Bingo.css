@@ -4,7 +4,7 @@ h1 {
 
 body {
     font-family: 'Lato', sans-serif;
-    align-items: flex-end;
+    align-items: center;
   }
 
   ol, ul {
@@ -29,7 +29,8 @@ body {
   #bingo {
     display: flex;
     justify-content: center;
-    padding: 40px;
+    margin: 0;
+    padding: 5px;
   }
 
   #square {
@@ -38,12 +39,12 @@ body {
     float: left;
     font-size: 20px;
     font-weight: bold;
-    height: 200px;
+    height: 170px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 200px;
+    width: 170px;
     cursor: pointer;
   }
 
@@ -56,9 +57,10 @@ body {
     background-color: white;
     color: black;
   }
+  
   .bingoButton{
     background-color: #F24C4E!important;
-    color: #FFFFFF;
+    color: white;
   }
 
   .alert-success {
@@ -85,10 +87,9 @@ body {
 
   #refreshbtn {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: auto;
-    padding: auto;
   }
 
   .bingotitle {
@@ -105,7 +106,6 @@ body {
       height: 150px;
       margin-right: -1px;
       margin-top: -1px;
-      padding: 0;
       text-align: center;
       width: 150px;
     }

@@ -132,12 +132,11 @@ class Board extends React.Component {
     const handleHide = () => this.setState({ show: false });
     return (
       <div>
-        <br />
         <Alert show={this.state.show} variant="success" id="alert" >
           <Alert.Heading>BINGO!</Alert.Heading>
           <p>Ohhoh, taidat olla aikamoisen setämiehen seurassa!
           </p>
-          <br /><div className="d-flex justify-content-end">
+          <div className="d-flex justify-content-end">
             <Button onClick={handleHide} variant="outline-success" id="bingobutton">
               Sulje
             </Button>
