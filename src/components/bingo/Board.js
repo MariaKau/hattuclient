@@ -101,12 +101,6 @@ class Board extends React.Component {
       if (this.state.bingoLines.includes(i)) continue;
       const [a, b, c, d] = lines[i];
       if (this.state.squares.includes(this.state.quotes[a].id) && this.state.squares.includes(this.state.quotes[b].id) && this.state.squares.includes(this.state.quotes[c].id) && this.state.squares.includes(this.state.quotes[d].id)) {
-        // if (this.state.bingoLines.includes(i)) {
-        //   this.setState({
-        //     bingoLines: this.state.bingoLines.filter(function (bline) {
-        //       bline !== i
-        //     })
-        //   })
         return this.setState({
           bingoFound: true,
           show: true
@@ -138,12 +132,11 @@ class Board extends React.Component {
     const handleHide = () => this.setState({ show: false });
     return (
       <div>
-        <br />
         <Alert show={this.state.show} variant="success" id="alert" >
           <Alert.Heading>BINGO!</Alert.Heading>
           <p>Ohhoh, taidat olla aikamoisen setämiehen seurassa!
           </p>
-          <br /><div className="d-flex justify-content-end">
+          <div className="d-flex justify-content-end">
             <Button onClick={handleHide} variant="outline-success" id="bingobutton">
               Sulje
             </Button>
