@@ -85,8 +85,9 @@ class Board extends React.Component {
       })
       : this.state.squares.push(quoteID)
 
-    console.log("Squares: " + this.state.squares)
-    this.getBingo();
+    this.setState({
+      show: false
+    }, () => { this.getBingo() });
   }
 
   //Function will set state of Alert showing as false and bingoFound as default
@@ -95,27 +96,23 @@ class Board extends React.Component {
   //If line is Bingo line, Alert will be set as show: true and bingoFound: true
 
   getBingo = () => {
-    this.setState({ show: false, bingoFound: false });
-    console.log(this.state.bingoFound)
     const lines = this.state.lines;
     for (let i = 0; i < lines.length; i++) {
-      // if (this.state.bingoLines.includes[i]) continue;
+      if (this.state.bingoLines.includes(i)) continue;
       const [a, b, c, d] = lines[i];
       if (this.state.squares.includes(this.state.quotes[a].id) && this.state.squares.includes(this.state.quotes[b].id) && this.state.squares.includes(this.state.quotes[c].id) && this.state.squares.includes(this.state.quotes[d].id)) {
-        this.setState({ bingoFound: true });
-        if (this.state.bingoLines.includes(i)) {
-          this.setState({
-            bingoLines: this.state.bingoLines.filter(function (bline) {
-              return bline !== i
-            })
-          })
-        } else {
-          this.state.bingoLines.push(i);
-          this.setState({ show: true })
-        }
+        // if (this.state.bingoLines.includes(i)) {
+        //   this.setState({
+        //     bingoLines: this.state.bingoLines.filter(function (bline) {
+        //       bline !== i
+        //     })
+        //   })
+        return this.setState({
+          bingoFound: true,
+          show: true
+        }, () => { this.state.bingoLines.push(i) });
       }
     }
-    console.log("Bingolines: " + this.state.bingoLines)
   }
 
   //Render one square taking number as parameter
@@ -141,17 +138,25 @@ class Board extends React.Component {
     const handleHide = () => this.setState({ show: false });
     return (
       <div>
+        <br />
         <Alert show={this.state.show} variant="success" id="alert" >
           <Alert.Heading>BINGO!</Alert.Heading>
           <p>Ohhoh, taidat olla aikamoisen setämiehen seurassa!
           </p>
-          <br />
-          <div className="d-flex justify-content-end">
-            <Button onClick={handleHide} variant="outline-success">
+          <br /><div className="d-flex justify-content-end">
+            <Button onClick={handleHide} variant="outline-success" id="bingobutton">
               Sulje
             </Button>
           </div>
         </Alert>
+        <div id="refreshbtn">
+          <br />
+          <h3 className="bingotitle">Setämiesbingo</h3>
+          <Button variant="outline-success" onClick={this.getNewBingoTable} id="bingobutton">
+            Uusi peli
+          </Button>
+          <br />
+        </div>
         <div id="bingo">
           <div id="board-row-1" className="board-row">
             {this.renderSquare(0)}
@@ -176,11 +181,6 @@ class Board extends React.Component {
             {this.renderSquare(13)}
             {this.renderSquare(14)}
             {this.renderSquare(15)}
-          </div>
-          <div id="refreshbtn">
-            <Button variant="outline-success" onClick={this.getNewBingoTable}>
-              Uusi peli
-          </Button>
           </div>
         </div>
       </div>
