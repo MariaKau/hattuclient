@@ -73,15 +73,15 @@ class Generator extends Component {
                 <Row className="kuvailucontainer">
 
                     <Col md={{ span: 3, offset: 2 }} className="btngroup">
-                        <Button className="btn" id="ajatusbtn" onClick={this.getQuotes1} >
+                        <Button className="genbtn" id="ajatusbtn" onClick={this.getQuotes1} >
                             Päivän ajatus
                         </Button>
                         <br />
-                        <Button className="btn" id="tsemppibtn" onClick={this.getQuotes2}>
+                        <Button className="genbtn" id="tsemppibtn" onClick={this.getQuotes2}>
                             Tsemppi
                         </Button>
                         <br />
-                        <Button className="btn" id="kiroilubtn" onClick={this.getQuotes3}>
+                        <Button className="genbtn" id="kiroilubtn" onClick={this.getQuotes3}>
                             K*ROILU!
                         </Button>
                     </Col>
