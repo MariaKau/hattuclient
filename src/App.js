@@ -10,8 +10,6 @@ class App extends Component {
     return (
         <div id="App">
           <Tabmenu activeTab={2} />
-          <div id="page-wrap">
-          </div>
         </div>
     );
   }
