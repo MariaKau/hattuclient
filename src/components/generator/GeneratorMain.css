@@ -35,7 +35,7 @@
   box-shadow: 2px 4px 0px 0px #8f8d8da2, 2px 4px 10px 0px rgba(87, 87, 87, 0.63), inset 0px 1px 0px rgba(128, 115, 115, 0.473), inset 0px 0px 3px rgba(194, 192, 192, 0.5);
   transition: all .4s ease-in-out;
   background-color: rgba(242, 76, 79, 0.719);
-  background-image: linear-gradient(to bottom, rgba(245, 84, 87, 0.747) 0%, rgb(248, 134, 136) 100%);
+  background-image: linear-gradient(to bottom, rgba(182, 50, 53, 0.897) 0%, rgb(214, 93, 95) 100%);
 }
 
 
@@ -50,7 +50,7 @@
 	
 }
 
-
+/* 
 p.quote_text {
 	position: relative;
 	width: 350px;
@@ -91,7 +91,7 @@ p.quote_text:before {
 	z-index: 0;
 	left: -20px;
 	top: 31px;
-}
+} */
 
 
 .copy {
@@ -115,9 +115,9 @@ p.quote_text:before {
 }
 /*buttons smaller in mobile */
 .btn {
-	height: 25px;
-	width: 90px;
-	font-size: 0.5em;
+	height: 30px;
+	width: 100px;
+	font-size: 0.6em;
 	border-radius: 5px
 }
 /* title smaller in mobile */
@@ -142,7 +142,7 @@ p.quote_text:before {
 .btn {
 	height: 40px;
 	width: 110px;
-	font-size: 0.5em;
+	font-size: 0.7em;
 	border-radius: 5px
 }
 
@@ -155,15 +155,5 @@ p.quote_text:before {
   }
 }
 
-/* @media screen and (min-width: 769px) {
-.p {
-	font-size: 900;
-	}
-}
-.btn {
-	width: 180px;
-  	height: 60px;
-	font-size: 1.2em;
-	border-radius: 5px
-} */
+
 
