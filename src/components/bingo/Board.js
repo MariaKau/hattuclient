@@ -75,9 +75,6 @@ class Board extends React.Component {
   //function will call getBingo-function
 
   handleClick = (number) => {
-    console.log("Square number: " + number);
-    console.log("Squares: " + this.state.squares);
-
     this.state.white[number] = !this.state.white[number];
     let quoteID = this.state.quotes[number].id;
     this.state.squares.includes(quoteID)
@@ -89,7 +86,6 @@ class Board extends React.Component {
       : this.state.squares.push(quoteID)
 
     this.setState({
-      bingoFound: false,
       show: false
     }, () => { this.getBingo() });
   }
@@ -102,23 +98,21 @@ class Board extends React.Component {
   getBingo = () => {
     const lines = this.state.lines;
     for (let i = 0; i < lines.length; i++) {
+      if (this.state.bingoLines.includes(i)) continue;
       const [a, b, c, d] = lines[i];
       if (this.state.squares.includes(this.state.quotes[a].id) && this.state.squares.includes(this.state.quotes[b].id) && this.state.squares.includes(this.state.quotes[c].id) && this.state.squares.includes(this.state.quotes[d].id)) {
-        if (this.state.bingoLines.includes(i)) {
-          this.setState({
-            bingoLines: this.state.bingoLines.filter(function (bline) {
-              return bline !== i
-            })
-          })
-        } else {
-          return this.setState({
-            bingoFound: true,
-            show: true
-          }, () => { this.state.bingoLines.push(i) });
-        }
+        // if (this.state.bingoLines.includes(i)) {
+        //   this.setState({
+        //     bingoLines: this.state.bingoLines.filter(function (bline) {
+        //       bline !== i
+        //     })
+        //   })
+        return this.setState({
+          bingoFound: true,
+          show: true
+        }, () => { this.state.bingoLines.push(i) });
       }
     }
-    return console.log("Bingolines: " + this.state.bingoLines)
   }
 
   //Render one square taking number as parameter
@@ -142,25 +136,23 @@ class Board extends React.Component {
 
   render() {
     const handleHide = () => this.setState({ show: false });
-    console.log("BINGO: " + this.state.bingoFound)
-    console.log("Show alert: " + this.state.show)
     return (
       <div>
-        <br/>
+        <br />
         <Alert show={this.state.show} variant="success" id="alert" >
           <Alert.Heading>BINGO!</Alert.Heading>
           <p>Ohhoh, taidat olla aikamoisen setämiehen seurassa!
           </p>
           <br /><div className="d-flex justify-content-end">
-            <Button onClick={handleHide} variant="outline-success">
+            <Button onClick={handleHide} variant="outline-success" id="bingobutton">
               Sulje
             </Button>
           </div>
         </Alert>
         <div id="refreshbtn">
           <br />
-          <h3>Setämiesbingo</h3>
-          <Button variant="outline-success" onClick={this.getNewBingoTable}>
+          <h3 className="bingotitle">Setämiesbingo</h3>
+          <Button variant="outline-success" onClick={this.getNewBingoTable} id="bingobutton">
             Uusi peli
           </Button>
           <br />

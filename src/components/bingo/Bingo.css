@@ -29,7 +29,6 @@ body {
   #bingo {
     display: flex;
     justify-content: center;
-    border: 1px solid #999;
     padding: 40px;
   }
 
@@ -77,8 +76,8 @@ body {
     margin-bottom: 0rem !important;
   }
 
-  .btn-outline-success {
-    background-color: #1FB58F!important;
+  #bingobutton {
+    background-color: #1FB58F !important;
     border-color: #898989 !important;
     margin-bottom: 1% !important;
     font-size: 2vmax !important;
@@ -92,6 +91,13 @@ body {
     padding: auto;
   }
 
+  .bingotitle {
+    font-size: 40px!important;
+    color: rgb(31, 181, 161);
+    padding-top: 1.5%;
+    padding-bottom: 5%;
+}
+
   @media only screen and (max-width: 1024px) {
     #square {
       font-size: 14px;
@@ -103,6 +109,11 @@ body {
       text-align: center;
       width: 150px;
     }
+
+    #bingobutton {
+      font-size: 1vmax !important;
+    }
+  
   }
 
   @media only screen and (max-width: 414px) {
@@ -115,6 +126,10 @@ body {
       padding: 0;
       text-align: center;
       width: 60px;
+    }
+
+    .bingotitle {
+      font-size: 4vmax!important;
     }
   }
 

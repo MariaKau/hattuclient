@@ -1,4 +1,5 @@
 import React from 'react';
+import './Bingo.css'
 
 class Square extends React.Component {
 
