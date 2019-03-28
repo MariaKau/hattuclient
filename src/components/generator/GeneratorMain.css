@@ -5,14 +5,15 @@
 	padding-bottom: 5%;
 }
 
+.kuva {
+	padding-top: 10%;
+}
+
 .btngroup {
 	display: block;
 	padding-bottom: 9%;
 }
 
-/* .bubble {
-	flex-direction: column-reverse;
-} */
 
 /* https://designmodo.com/3d-css3-button/ */
 .btn {
@@ -31,7 +32,7 @@
   box-shadow: 2px 4px 0px 0px #8f8d8da2, 2px 4px 10px 0px rgba(87, 87, 87, 0.63), inset 0px 1px 0px rgba(128, 115, 115, 0.473), inset 0px 0px 3px rgba(194, 192, 192, 0.5);
   transition: all .4s ease-in-out;
   background-color: rgba(242, 76, 79, 0.719);
-  background-image: linear-gradient(to bottom, rgba(245, 84, 87, 0.747) 0%, rgb(248, 134, 136) 100%);
+  background-image: linear-gradient(to bottom, rgba(182, 50, 53, 0.897) 0%, rgb(214, 93, 95) 100%);
 }
 
 
@@ -46,80 +47,6 @@
 	
 }
 
-/* #tsemppibtn {
-	background-color: #F24C4E;
-	background-image: linear-gradient(to bottom, rgb(192, 60, 62) 0%, #F24C4E 100%);
-}
-#tsemppibtn:hover {
-	box-shadow: 0px 15px 25px -5px rgba(darken(rgb(30, 60, 99), 40%));
-	transform: scale(1.05)
-}
-#tsemppibtn:active {
-	background-image: linear-gradient(to bottom, rgb(223, 70, 72) 0%, rgb(223, 88, 90) 100%);
-	box-shadow: 0px 5px #2b638f, 0px 1px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-	transform: translate(0, 4px);
-}
-
-#kiroilubtn {
-	background-color: rgba(31, 181, 161, 0.678);
-	background-image: linear-gradient(to bottom, rgb(24, 136, 121) 0%, rgba(31, 181, 161) 100%);
-}
-#kiroilubtn:hover {
-	box-shadow: 0px 15px 25px -5px rgba(darken(rgb(30, 60, 99), 40%));
-	transform: scale(1.05)
-}
-#kiroilubtn:active {
-	background-image: linear-gradient(to bottom, rgb(28, 160, 145) 0%, rgb(62, 173, 166) 100%);
-	box-shadow: 0px 5px #2b638f, 0px 1px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-	transform: translate(0, 4px);
-} */
-
-
-
-
-p.quote_text {
-	position: relative;
-	width: 350px;
-	height: auto;
-	min-height: 200px;
-	padding: 1.5em;
-	background: #FFFFFF;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 10px;
-	border: #898989 solid 3px;
-	margin-left: 80px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 25px;
-	overflow-wrap: break-word;
-}
-p.quote_text:after {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 15px 15px 15px 0;
-	border-color: transparent #FFFFFF;
-	display: block;
-	width: 0;
-	z-index: 1;
-	left: -15px;
-	top: 33px;
-}
-p.quote_text:before {
-	font-size: 10em;
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 17px 17px 17px 0;
-	border-color: transparent #898989;
-	display: block;
-	width: 0;
-	z-index: 0;
-	left: -20px;
-	top: 31px;
-}
-
-
 .copy {
 	font-size: 12px;
 	text-align: center;
@@ -128,8 +55,6 @@ p.quote_text:before {
 .bubble {
 	margin-bottom: 8%;
 }
-
-
 
 @media only screen and (max-width: 420px) {
 .kuvailu {
@@ -141,50 +66,17 @@ p.quote_text:before {
 }
 /*buttons smaller in mobile */
 .btn {
-	height: 25px;
-	width: 80px;
-	font-size: 0.5em;
+	height: 30px;
+	width: 100px;
+	font-size: 0.6em;
 	border-radius: 5px
 }
 /* title smaller in mobile */
 .title {
 	font-size: 20px;
 }
-/* speech bubble smaller in mobile*/
-#SpeechBubble {
-	text-align: center;
-	font-size: 0.7em;
-	position: relative;
-	background: rgba(31, 181, 161, 0.438);
-	border-radius: .9em;
-	background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
-	width: 170px;
-	height: auto;
-	min-height: 100px;
-	max-height: 100px;
-	padding: 1em;
-	animation-name: expand-bounce;
-	animation-duration: 0.25s;
-  }
-  #SpeechBubble:after {
-	overflow: hidden;
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 2em solid transparent;
-	border-top-color: rgba(31, 181, 161, 0.438);
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -1em;
-	margin-bottom: -2em;
-  }
+
   
-  .quote {
-	display: inline-block !important;
-  }
   .whole {
 	  display: flex !important;
 	  flex-direction: column !important;
@@ -201,39 +93,10 @@ p.quote_text:before {
 .btn {
 	height: 40px;
 	width: 110px;
-	font-size: 0.5em;
+	font-size: 0.7em;
 	border-radius: 5px
 }
-#SpeechBubble {
-	text-align: center;
-	font-size: 1em;
-	position: relative;
-	background: rgba(31, 181, 161, 0.438);
-	border-radius: .9em;
-	background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
-	width: 250px;
-	height: auto;
-	min-height: 150px;
-	max-height: 150px;
-	padding: 1em;
-	animation-name: expand-bounce;
-	animation-duration: 0.25s;
-  }
-#SpeechBubble:after {
-	overflow: hidden;
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 2em solid transparent;
-	border-top-color: rgba(31, 181, 161, 0.438);
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -1em;
-	margin-bottom: -2em;
-}
+
   
   .puhekupla .whole {
 	text-align: center;
@@ -243,15 +106,5 @@ p.quote_text:before {
   }
 }
 
-/* @media screen and (min-width: 769px) {
-.p {
-	font-size: 900;
-	}
-}
-.btn {
-	width: 180px;
-  	height: 60px;
-	font-size: 1.2em;
-	border-radius: 5px
-} */
+
 

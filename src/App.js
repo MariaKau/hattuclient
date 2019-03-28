@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Tabmenu from './navigation/Tabmenu';
+import './navigation/Tabmenu.css';
 
 // Navigation and router
 
