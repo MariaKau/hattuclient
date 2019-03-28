@@ -137,7 +137,7 @@ class Board extends React.Component {
           <p>Ohhoh, taidat olla aikamoisen setämiehen seurassa!
           </p>
           <div className="d-flex justify-content-end">
-            <Button onClick={handleHide} variant="outline-success" id="bingobutton">
+            <Button id="bingobutton" onClick={handleHide} variant="outline-success">
               Sulje
             </Button>
           </div>
@@ -145,7 +145,7 @@ class Board extends React.Component {
         <div id="refreshbtn">
           <br />
           <h3 className="bingotitle">Setämiesbingo</h3>
-          <Button variant="outline-success" onClick={this.getNewBingoTable} id="bingobutton">
+          <Button id="bingobutton" variant="outline-success" onClick={this.getNewBingoTable}>
             Uusi peli
           </Button>
           <br />
