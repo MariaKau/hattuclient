@@ -141,10 +141,6 @@ body {
       text-align: center;
       width: 60px;
     }
-
-    .bingotitle {
-      font-size: 4vmax!important;
-    }
   }
 
   @media only screen and (max-width: 375px) {
