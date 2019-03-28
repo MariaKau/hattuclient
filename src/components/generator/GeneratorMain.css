@@ -16,7 +16,7 @@
 
 
 /* https://designmodo.com/3d-css3-button/ */
-.genbtn {
+.gen {
   width: 190px;
   height: 60px;
   /* margin-right: 4%;*/
@@ -36,11 +36,11 @@
 }
 
 
-.genbtn:hover {
+.gen:hover {
 	box-shadow: 0px 15px 25px -5px rgba(darken(rgb(105, 94, 70), 40%));
 	transform: scale(1.05)
 }
-.genbtn:active {
+.gen:active {
 	background-image: linear-gradient(to bottom, rgba(240, 38, 41, 0.74) 0%, rgba(242, 76, 79, 0.719) 100%);
 	box-shadow: 0px 5px #2b638f, 0px 1px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 	transform: translate(0, 4px);
@@ -65,7 +65,7 @@
 	display: none !important;
 }
 /*buttons smaller in mobile */
-.genbtn {
+.gen {
 	height: 30px;
 	width: 100px;
 	font-size: 0.6em;
@@ -90,7 +90,7 @@
 .kuva {
 	height: 400px;
 }
-.genbtn {
+.gen {
 	height: 40px;
 	width: 110px;
 	font-size: 0.7em;
