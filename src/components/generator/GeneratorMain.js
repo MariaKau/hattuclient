@@ -52,7 +52,7 @@ class Generator extends Component {
     }
 
     render() {
-        console.log(this.state.quotes)
+        
         const getSentence = this.state.quotes.map((powerQuote, i) => {
         if(this.state.category === "ajatus") {
             return <Bubble key={i} value={powerQuote} animate={this.state.animateBubble} doneAnimating={this.animationDone} />
