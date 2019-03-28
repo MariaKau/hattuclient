@@ -61,7 +61,7 @@
     min-height: 100px;
     max-height: 100px;
     padding: 1em;
-    animation-name: expand-bounce;
+    animation-name: bounce;
     animation-duration: 0.25s;
     }
     #SpeechBubble3.AnimatingBubble3 {
@@ -100,7 +100,7 @@
     min-height: 150px;
     max-height: 150px;
     padding: 1em;
-    animation-name: expand-bounce;
+    animation-name: bounce;
     animation-duration: 0.25s;
     }
 #SpeechBubble3:after {
@@ -134,7 +134,7 @@
     }
     #SpeechBubble3.AnimatingBubble3 {
         animation-name: bounce;
-        animation-duration: 0.7s;
+        animation-duration: 0.4s;
     }
     
     #SpeechBubble3 :after {
@@ -160,7 +160,7 @@
             transform: scale(0);
         }
         50% {
-            transform: scale(1.25);
+            transform: scale(1.5);
         }
         100% {
             transform: scale(1);
