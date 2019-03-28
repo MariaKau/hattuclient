@@ -29,8 +29,7 @@ body {
   #bingo {
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 5px;
+    padding-bottom: 5px;
   }
 
   #square {
@@ -60,18 +59,18 @@ body {
   
   .bingoButton{
     background-color: #F24C4E!important;
-    color: white;
+    color: #FFFFFF;
   }
 
   .alert-success {
     color: #FBFBFB !important;
     background-color: #1FB58F!important;
     border-color: #1FB58F !important;
-    font-size: 2.5vmax;
+    font-size: 1.5vmax;
   }
 
   .alert-heading {
-    font-size: 5vmax;
+    font-size: 2vmax;
   }
 
   p {
@@ -82,7 +81,17 @@ body {
     background-color: #1FB58F !important;
     border-color: #898989 !important;
     margin-bottom: 1% !important;
-    font-size: 2vmax !important;
+    font-size: 1.5vmax !important;
+    transition: all .3s;
+    border: 1px solid #1FB58F;
+    text-shadow: 0px -0.2px 0px #a1a1a179;
+    box-shadow: 2px 4px 0px 0px #8f8d8da2, 2px 4px 10px 0px rgba(87, 87, 87, 0.63), inset 0px 1px 0px rgba(128, 115, 115, 0.473), inset 0px 0px 3px rgba(194, 192, 192, 0.5);
+    transition: all .4s ease-in-out;
+  }
+
+  .btn:hover {
+    box-shadow: 0px 15px 25px -5px rgba(darken(rgb(105, 94, 70), 40%));
+    transform: scale(1.05)
   }
 
 .btn-outline-success {
@@ -94,7 +103,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: auto;
+    margin-bottom: 0 !important;
   }
 
   .bingotitle {

@@ -3,17 +3,17 @@
 	font-size: 1.8em;
     position: absolute;
     left: 50px;
-	background: rgba(244, 158, 9, 0.575);
+	background: rgba(245, 174, 51, 0.575);
 	border-radius: 1em;
-	background-image: linear-gradient(to bottom, rgba(244, 158, 9, 0.555) 0%, rgba(243, 205, 140, 0.966) 100%);
+	background-image: linear-gradient(to bottom, rgba(241, 186, 91, 0.671) 0%, rgba(241, 211, 158, 0.966) 100%);
     min-width: 150px;
     height: auto;
 	padding: 0.8em;
 }
 
 #SpeechBubble2.AnimatingBubble2 {
-	animation-name: bounce;
-	animation-duration: 0.5s;
+	animation-name: pulse;
+	animation-duration: 0.9s;
 	
 }
 #SpeechBubble2:after {
@@ -25,30 +25,24 @@
 	width: 0;
 	height: 0;
 	border: 1.8em solid transparent;
-	border-top-color: rgba(243, 205, 140, 0.966);
+	border-top-color: rgba(243, 209, 149, 0.966);
 	border-bottom: 0;
 	border-right: 0;
 	margin-left: -0.734em;
 	margin-bottom: -1.469em;
 }
 
-@keyframes bounce {
-	0% {
-	  transform: scale(0);
-	}
-	50% {
-	  transform: scale(1.25);
-	}
-	100% {
-	  transform: scale(1);
-	}
+@keyframes pulse {
+	from { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  to { transform: scale(1); }
 }
 
 @media only screen and (max-width: 420px) {
 /* speech bubble smaller in mobile*/
 #SpeechBubble2 {
     text-align: center;
-    font-size: 0.7em;
+    font-size: 0.8em;
     position: relative;
     background: rgba(31, 181, 161, 0.438);
     border-radius: .9em;
@@ -56,9 +50,9 @@
     width: 170px;
     height: auto;
     min-height: 100px;
-    max-height: 100px;
+    max-height: 200px;
     padding: 1em;
-    animation-name: expand-bounce;
+    animation-name: pulse;
     animation-duration: 0.25s;
     }
     #SpeechBubble2.AnimatingBubble2 {
@@ -96,7 +90,7 @@
     min-height: 150px;
     max-height: 150px;
     padding: 1em;
-    animation-name: expand-bounce;
+    animation-name: pulse;
     animation-duration: 0.25s;
     }
 #SpeechBubble2:after {
@@ -115,4 +109,45 @@
     margin-bottom: -2em;
 }
 
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #SpeechBubble2 {
+        text-align: center;
+        font-size: 1.2em;
+        position: relative;
+        left: 100px;
+        background: rgba(245, 174, 51, 0.575);
+        border-radius: .9em;
+        background-image: linear-gradient(to bottom, rgba(241, 186, 91, 0.671) 0%, rgba(241, 211, 158, 0.966) 100%);
+        min-width: 300px;
+        padding: 1em;
+    }
+    #SpeechBubble2.AnimatingBubble2 {
+        animation-name: pulse;
+        animation-duration: 0.9s;
+    }
+    
+    #SpeechBubble2 :after {
+        overflow: hidden;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 2em solid transparent;
+        border-top-color: rgba(243, 205, 140, 0.966);
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -1em;
+        margin-bottom: -2em;
+    }
+    
+    
+    
+    @keyframes pulse {
+        from { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        to { transform: scale(1); }
+        }
 }

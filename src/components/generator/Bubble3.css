@@ -1,22 +1,23 @@
 #SpeechBubble3 {
 	text-align: center;
-	font-size: 2.1em;
+	font-size: 2em;
     position: relative;
     left: 150px;
-	background: rgba(243, 87, 89, 0.801);
+	background: rgba(240, 175, 177, 0.801);
 	border-radius: 4em;
-	background-image: linear-gradient(to bottom, rgba(243, 119, 121, 0.815) 0%, rgba(241, 169, 170, 0.87) 100%);
+	background-image: linear-gradient(to bottom, rgba(241, 163, 166, 0.863) 0%, rgba(241, 203, 204, 0.911) 100%);
     min-width: 150px;
-    max-width: 450px;
+    max-width: 400px;
 	height: auto;
 	min-height: 100px;
 	max-height: 250px;
-	padding: 1em;
+    padding: 1em;
+    margin-right: -1em;
 }
 
 #SpeechBubble3.AnimatingBubble3 {
 	animation-name: bounce;
-	animation-duration: 0.3s;
+	animation-duration: 0.4s;
 }
 #SpeechBubble3:after {
 	overflow: hidden;
@@ -27,7 +28,7 @@
 	width: 0;
 	height: 0;
 	border: 1.3em solid transparent;
-	border-top-color: rgba(243, 162, 163, 0.911);
+	border-top-color: rgba(241, 203, 204, 0.945);
 	border-bottom: 0;
 	margin-left: -0.594em;
 	margin-bottom: -1.187em;
@@ -38,7 +39,7 @@
 	  transform: scale(0);
 	}
 	50% {
-	  transform: scale(1.25);
+	  transform: scale(1.5);
 	}
 	100% {
 	  transform: scale(1);
@@ -49,17 +50,18 @@
 /* speech bubble smaller in mobile*/
 #SpeechBubble3 {
     text-align: center;
-    font-size: 0.7em;
+    font-size: 0.8em;
     position: relative;
+    left: 50px;
     background: rgba(31, 181, 161, 0.438);
     border-radius: .9em;
     background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
-    width: 170px;
+    max-width: 100px;
     height: auto;
     min-height: 100px;
     max-height: 100px;
     padding: 1em;
-    animation-name: expand-bounce;
+    animation-name: bounce;
     animation-duration: 0.25s;
     }
     #SpeechBubble3.AnimatingBubble3 {
@@ -89,6 +91,7 @@
     text-align: center;
     font-size: 1em;
     position: relative;
+    left: 10px;
     background: rgba(31, 181, 161, 0.438);
     border-radius: .9em;
     background-image: linear-gradient(to bottom, rgba(31, 181, 161, 0.541) 0%, rgba(146, 224, 214, 0.733) 100%);
@@ -97,7 +100,7 @@
     min-height: 150px;
     max-height: 150px;
     padding: 1em;
-    animation-name: expand-bounce;
+    animation-name: bounce;
     animation-duration: 0.25s;
     }
 #SpeechBubble3:after {
@@ -116,4 +119,51 @@
     margin-bottom: -2em;
 }
 
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #SpeechBubble3 {
+        text-align: center;
+        font-size: 1.2em;
+        position: relative;
+        left: 100px;
+        background: rgba(240, 175, 177, 0.801);
+        border-radius: .9em;
+        background-image: linear-gradient(to bottom, rgba(241, 163, 166, 0.863) 0%, rgba(241, 203, 204, 0.911) 100%);
+        min-width: 300px;
+        padding: 0.5em;
+    }
+    #SpeechBubble3.AnimatingBubble3 {
+        animation-name: bounce;
+        animation-duration: 0.4s;
+    }
+    
+    #SpeechBubble3 :after {
+        overflow: hidden;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 2em solid transparent;
+        border-top-color: rgba(241, 203, 204, 0.945);
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -1em;
+        margin-bottom: -2em;
+    }
+    
+    
+    
+    @keyframes bounce {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
 }
