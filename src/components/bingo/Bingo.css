@@ -85,6 +85,11 @@ body {
     font-size: 2vmax !important;
   }
 
+.btn-outline-success {
+    color: white;
+    border-color: #1FB58F;
+}
+
   #refreshbtn {
     display: flex;
     justify-content: space-around;
