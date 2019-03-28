@@ -101,12 +101,6 @@ class Board extends React.Component {
       if (this.state.bingoLines.includes(i)) continue;
       const [a, b, c, d] = lines[i];
       if (this.state.squares.includes(this.state.quotes[a].id) && this.state.squares.includes(this.state.quotes[b].id) && this.state.squares.includes(this.state.quotes[c].id) && this.state.squares.includes(this.state.quotes[d].id)) {
-        // if (this.state.bingoLines.includes(i)) {
-        //   this.setState({
-        //     bingoLines: this.state.bingoLines.filter(function (bline) {
-        //       bline !== i
-        //     })
-        //   })
         return this.setState({
           bingoFound: true,
           show: true
