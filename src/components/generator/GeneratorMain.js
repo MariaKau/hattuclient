@@ -27,7 +27,7 @@ class Generator extends Component {
     }
 
     getQuotes1() {
-        fetch('https://hattu-server.herokuapp.com/api/ajatus/:ajatus', { mode: 'cors' })
+        fetch('https://hattu-server.herokuapp.com/api/ajatus', { mode: 'cors' })
             .then(res => res.json())
             .then(data => {
                 this.setState({ quotes: data, category: "ajatus", animateBubble: true });
@@ -35,13 +35,13 @@ class Generator extends Component {
             .catch((err) => { throw err })
     }
     getQuotes2() {
-        fetch('https://hattu-server.herokuapp.com/api/tsemppi/:tsemppi', { mode: 'cors' })
+        fetch('https://hattu-server.herokuapp.com/api/tsemppi', { mode: 'cors' })
             .then(res => res.json())
             .then(data => this.setState({ quotes: data, category: "tsemppi", animateBubble: true  }))
             .catch((err) => { throw err })
     }
     getQuotes3() {
-        fetch('https://hattu-server.herokuapp.com/api/kiroilu/:kiroilu', { mode: 'cors' })
+        fetch('https://hattu-server.herokuapp.com/api/kiroilu', { mode: 'cors' })
             .then(res => res.json())
             .then(data => this.setState({ quotes: data, category: "kiroilu", animateBubble: true  }))
             .catch((err) => { throw err })
